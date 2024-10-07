@@ -2,11 +2,10 @@
 
 Welcome to the Prado Mobile SDK GitHub - thank you for visiting.
 
-Prado provides a unique monetization solution to enable app publishers to safely monetize their apps with relevant ads.
+Prado provides a unique monetization solution maximizing your ad revenue.
 
-Uniting brands, content publishers and families, Prado is the leading COPPA & GDPR compliant contextual mobile advertising network that safely reaches over 350 million kids, teens, and families every month.
-
-**These SDKs were verified not to contain the Advertiser Identifier (IDFA) as required by Apple App Store regulation for apps of Kids category.**
+Monetize your mobile app across every format and unlock premium demand from today’s top advertisers. 
+Boost your revenue with technology designed to amplify earnings.
 
 To get started, please select the option below that best suits your application:
 
