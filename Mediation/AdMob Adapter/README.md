@@ -1,6 +1,6 @@
-# Prado Admob Adapters
+# Prado Admob Adapter
 
-Our Adapters offer support for the following ad formats:
+Prado Admob Adapter supports the following ad formats:
 
 + Interstitial 
 + Rewarded Video
@@ -19,9 +19,8 @@ Before publishing your first app please complete the process for [Prado's Publis
 Please set up [app-ads.txt](https://prado.co/app-ads.txt) for all the apps that use Prado sdk. This will increase your fill rate and earnings and will prevent ad serving being blocked.
 Follow these instructions on how to [Set up an app-ads.txt file for your app](https://prado.co/introappadstext).
 
-
 ## CPM Setup
-You will need to define your Ad Unit CPM as displayed in your Prado dashboard. Contact a Prado publisher representative for more information at sdk@prado.co.
+You will need to define your Admob Ad Units CPM and align them with Prado eCPM displayed in your Prado dashboard. Contact a Prado publisher representative for more information at sdk@prado.co
 
 ## Important note:
 While mapping the Prado Ad unit on Admob, it is highly recommended to run some JSON validator on the parameters passed to the Class name (AppID and Token). This method may minimize parsing mistakes that may arise on initial connection.
