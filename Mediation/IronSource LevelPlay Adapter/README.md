@@ -1,10 +1,10 @@
 # ironSource LevelPlay Adapter
 
-Our Adapters offer support for the following ad types:
+Prado ironSource LevelPlay Adapter supports the following ad formats:
 
-+ Interstitial Mediation 
-+ Rewarded Video Mediation 
-+ Banner Mediation 
++ Interstitial 
++ Rewarded Video
++ Banner
 
 On the following platforms:
 
