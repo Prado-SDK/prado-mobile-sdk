@@ -1,10 +1,10 @@
 # Prado Admob Adapters
 
-Our Adapters offer support for the following ad types:
+Our Adapters offer support for the following ad formats:
 
-+ Interstitial Mediation 
-+ Rewarded Video Mediation 
-+ Banner Mediation 
++ Interstitial 
++ Rewarded Video
++ Banner
 
 On the following platforms:
 
