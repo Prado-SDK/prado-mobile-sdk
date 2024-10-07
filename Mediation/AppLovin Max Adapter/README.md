@@ -1,10 +1,10 @@
-# AppLovin Max Adapters
+# AppLovin Max Adapter
 
-Our Adapters offer support for the following ad types:
+Prado AppLovin Max Adapter supports the following ad formats:
 
-+ Interstitial Mediation 
-+ Rewarded Video Mediation 
-+ Banner Mediation 
++ Interstitial 
++ Rewarded Video
++ Banner
 
 On the following platforms:
 
