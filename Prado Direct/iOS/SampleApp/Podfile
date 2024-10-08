@@ -1,0 +1,24 @@
+workspace 'SampleApp.xcworkspace'
+platform :ios, '12.0'
+
+def prado_pod
+	pod ‘PradoSDK’, :podspec => 'https://github.com/Prado-SDK/prado-ios-frameworks/raw/refs/heads/docs/PradoSDK/10.0.0/PradoSDK.podspec'
+end
+
+target 'SampleAppSwift' do
+  use_frameworks!
+  prado_pod
+  project 'SampleAppSwift/SampleAppSwift.xcodeproj'
+end
+
+target 'SampleAppObjc' do
+  use_frameworks!
+  prado_pod
+  project 'SampleAppObjc/SampleAppObjc.xcodeproj'
+end
+
+target 'CommonSampleApp' do
+  use_frameworks!
+  prado_pod
+  project 'CommonSampleApp/CommonSampleApp.xcodeproj'
+end
