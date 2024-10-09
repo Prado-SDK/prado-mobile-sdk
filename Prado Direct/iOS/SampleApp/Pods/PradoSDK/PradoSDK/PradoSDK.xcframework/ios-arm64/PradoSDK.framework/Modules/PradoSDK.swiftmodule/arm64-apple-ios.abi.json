@@ -698,7 +698,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "PradoInitDelegate",
-                "printedName": "any PradoSDK.PradoInitDelegate",
+                "printedName": "PradoSDK.PradoInitDelegate",
                 "usr": "c:@M@PradoSDK@objc(pl)PradoInitDelegate"
               }
             ],
@@ -3748,7 +3748,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "PradoRewardedDelegate",
-                "printedName": "any PradoSDK.PradoRewardedDelegate",
+                "printedName": "PradoSDK.PradoRewardedDelegate",
                 "usr": "c:@M@PradoSDK@objc(pl)PradoRewardedDelegate"
               }
             ],
@@ -3936,7 +3936,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "PradoBannerDelegate",
-                "printedName": "any PradoSDK.PradoBannerDelegate",
+                "printedName": "PradoSDK.PradoBannerDelegate",
                 "usr": "c:@M@PradoSDK@objc(pl)PradoBannerDelegate"
               }
             ],
@@ -3960,12 +3960,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "(any PradoSDK.PradoBannerDelegate)?",
+                "printedName": "PradoSDK.PradoBannerDelegate?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "PradoBannerDelegate",
-                    "printedName": "any PradoSDK.PradoBannerDelegate",
+                    "printedName": "PradoSDK.PradoBannerDelegate",
                     "usr": "c:@M@PradoSDK@objc(pl)PradoBannerDelegate"
                   }
                 ],
@@ -3978,8 +3978,8 @@
             "moduleName": "PradoSDK",
             "declAttributes": [
               "HasInitialValue",
-              "HasStorage",
               "Custom",
+              "HasStorage",
               "AccessControl",
               "ObjC"
             ],
@@ -3993,12 +3993,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "(any PradoSDK.PradoBannerDelegate)?",
+                    "printedName": "PradoSDK.PradoBannerDelegate?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "PradoBannerDelegate",
-                        "printedName": "any PradoSDK.PradoBannerDelegate",
+                        "printedName": "PradoSDK.PradoBannerDelegate",
                         "usr": "c:@M@PradoSDK@objc(pl)PradoBannerDelegate"
                       }
                     ],
@@ -4028,12 +4028,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "(any PradoSDK.PradoBannerDelegate)?",
+                    "printedName": "PradoSDK.PradoBannerDelegate?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "PradoBannerDelegate",
-                        "printedName": "any PradoSDK.PradoBannerDelegate",
+                        "printedName": "PradoSDK.PradoBannerDelegate",
                         "usr": "c:@M@PradoSDK@objc(pl)PradoBannerDelegate"
                       }
                     ],
@@ -4173,13 +4173,6 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "UITraitChangeObservable",
-            "printedName": "UITraitChangeObservable",
-            "usr": "s:5UIKit23UITraitChangeObservableP",
-            "mangledName": "$s5UIKit23UITraitChangeObservableP"
           },
           {
             "kind": "Conformance",
@@ -4473,13 +4466,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "UITraitChangeObservable",
-            "printedName": "UITraitChangeObservable",
-            "usr": "s:5UIKit23UITraitChangeObservableP",
-            "mangledName": "$s5UIKit23UITraitChangeObservableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "__DefaultCustomPlaygroundQuickLookable",
             "printedName": "__DefaultCustomPlaygroundQuickLookable",
             "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
@@ -4535,7 +4521,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "PradoInterstitialDelegate",
-                "printedName": "any PradoSDK.PradoInterstitialDelegate",
+                "printedName": "PradoSDK.PradoInterstitialDelegate",
                 "usr": "c:@M@PradoSDK@objc(pl)PradoInterstitialDelegate"
               }
             ],

@@ -2,15 +2,15 @@ PODS:
   - PradoSDK (10.0.0)
 
 DEPENDENCIES:
-  - PradoSDK (from `https://github.com/Prado-SDK/prado-ios-frameworks/raw/refs/heads/docs/PradoSDK/10.0.0/PradoSDK.podspec`)
+  - PradoSDK (from `https://github.com/Prado-SDK/prado-ios-frameworks/raw/refs/heads/beta/PradoSDK/10.0.0/PradoSDK.podspec`)
 
 EXTERNAL SOURCES:
   PradoSDK:
-    :podspec: https://github.com/Prado-SDK/prado-ios-frameworks/raw/refs/heads/docs/PradoSDK/10.0.0/PradoSDK.podspec
+    :podspec: https://github.com/Prado-SDK/prado-ios-frameworks/raw/refs/heads/beta/PradoSDK/10.0.0/PradoSDK.podspec
 
 SPEC CHECKSUMS:
-  PradoSDK: 87b06e8958f53c5f808f9c79a1a244e2bf4777df
+  PradoSDK: e7c75698611d03f8bbd1827c27080ee1ad7470ef
 
-PODFILE CHECKSUM: ca646d2dc09e12fc1e5a7282c75e0e648b5233ac
+PODFILE CHECKSUM: 82c9a62c0cd2560783022d6f370333a825bb5ec7
 
 COCOAPODS: 1.15.2

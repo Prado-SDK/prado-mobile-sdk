@@ -536,22 +536,40 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		13EA1CE7C766ABD3ED4303FC6567D44D /* Debug */ = {
+		0EF1088359B4145F223D3D57692D44ED /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 85235FA845DD2BBC336638650E92356D /* PradoSDK.debug.xcconfig */;
+			baseConfigurationReference = 295CC727C64AB9D74AD20B7D457016BF /* PradoSDK.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGNING_ALLOWED = NO;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/PradoSDK";
 				IBSC_MODULE = PradoSDK;
 				INFOPLIST_FILE = "Target Support Files/PradoSDK/ResourceBundle-PrivacyInfo-PradoSDK-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_NAME = PrivacyInfo;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = bundle;
 			};
-			name = Debug;
+			name = Release;
+		};
+		189DE67D9EFB4B81270BB5931A5E4262 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 295CC727C64AB9D74AD20B7D457016BF /* PradoSDK.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
 		};
 		2B9E26EAE2CD392AD762421F663075A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -616,6 +634,23 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		2D7CA67DB6FE72ABE1A0C087921D473A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85235FA845DD2BBC336638650E92356D /* PradoSDK.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/PradoSDK";
+				IBSC_MODULE = PradoSDK;
+				INFOPLIST_FILE = "Target Support Files/PradoSDK/ResourceBundle-PrivacyInfo-PradoSDK-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_NAME = PrivacyInfo;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
 		};
@@ -793,40 +828,22 @@
 			};
 			name = Release;
 		};
-		9F4664F91C7409EF7ABDED3AF7BCDDFE /* Release */ = {
+		AB24562CC427BC72593BFB3ED06FB21D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 295CC727C64AB9D74AD20B7D457016BF /* PradoSDK.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGNING_ALLOWED = NO;
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/PradoSDK";
-				IBSC_MODULE = PradoSDK;
-				INFOPLIST_FILE = "Target Support Files/PradoSDK/ResourceBundle-PrivacyInfo-PradoSDK-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				PRODUCT_NAME = PrivacyInfo;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		A4AAF408CE2CFF4A9EE6938B8194E2FE /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 295CC727C64AB9D74AD20B7D457016BF /* PradoSDK.release.xcconfig */;
+			baseConfigurationReference = 85235FA845DD2BBC336638650E92356D /* PradoSDK.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
 		ABCB55637E2624780118EF1098743FD8 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -903,23 +920,6 @@
 			};
 			name = Release;
 		};
-		B6E831773C70BE29972A937A74826C92 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 85235FA845DD2BBC336638650E92356D /* PradoSDK.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 		CB06A80FE5DDFC477515A1475DFCF0D9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8A8B1FEE504B25A27C48D27579EA6017 /* Pods-SampleAppSwift.release.xcconfig */;
@@ -982,8 +982,8 @@
 		3658D83889F7FDD4B1BC0B9CBBCFF0D3 /* Build configuration list for PBXAggregateTarget "PradoSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B6E831773C70BE29972A937A74826C92 /* Debug */,
-				A4AAF408CE2CFF4A9EE6938B8194E2FE /* Release */,
+				AB24562CC427BC72593BFB3ED06FB21D /* Debug */,
+				189DE67D9EFB4B81270BB5931A5E4262 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1009,8 +1009,8 @@
 		821BBF1A9C4AA82FF89736B1ACFB02C1 /* Build configuration list for PBXNativeTarget "PradoSDK-PrivacyInfo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				13EA1CE7C766ABD3ED4303FC6567D44D /* Debug */,
-				9F4664F91C7409EF7ABDED3AF7BCDDFE /* Release */,
+				2D7CA67DB6FE72ABE1A0C087921D473A /* Debug */,
+				0EF1088359B4145F223D3D57692D44ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

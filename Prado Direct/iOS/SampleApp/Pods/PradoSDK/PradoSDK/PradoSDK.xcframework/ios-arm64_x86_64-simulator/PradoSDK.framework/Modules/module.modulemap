@@ -1,7 +1,7 @@
 framework module PradoSDK {
   umbrella header "PradoSDK.h"
-  export *
 
+  export *
   module * { export * }
 }
 

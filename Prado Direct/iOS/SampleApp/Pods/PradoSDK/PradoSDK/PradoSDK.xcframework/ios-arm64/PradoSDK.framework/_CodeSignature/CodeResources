@@ -18,7 +18,7 @@
 		</data>
 		<key>Headers/PradoSDK-Swift.h</key>
 		<data>
-		3/Jr260QAKELCwHsAfUop0lzI5g=
+		WlB37t9LiPoYRhj74qHSH+7OHt0=
 		</data>
 		<key>Headers/PradoSDK.h</key>
 		<data>
@@ -26,31 +26,31 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		6RnPAesU3OFy1skGEGFJf0iJv0w=
+		M8Mxd5+1hA+oBJQKFbQMJo/rkdg=
 		</data>
 		<key>Modules/PradoSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		9Fhwh8oxAAWRTstioTbIe2lBEZo=
+		oix9FBMLIliVb7k8J6l7twW05eo=
 		</data>
 		<key>Modules/PradoSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		aAHvW66o27xbvxK9tLGOZP7WNKM=
+		UKJqmvGf79+UoKcz1eqPzUS3ynw=
 		</data>
 		<key>Modules/PradoSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		VijX5V0+oy3wBryAVv7SDYimMyk=
+		pFSNT4BQFrIjoyUZzyKa67jtuEM=
 		</data>
 		<key>Modules/PradoSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		aAHvW66o27xbvxK9tLGOZP7WNKM=
+		UKJqmvGf79+UoKcz1eqPzUS3ynw=
 		</data>
 		<key>Modules/PradoSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		T8eIFcfcntfzZA9Mt47tCizBvZY=
+		ALVvAboTRtCVKyOZU6otd1jRyD0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		pMIdJHapZ+hkQUtWDb/rkArqK3g=
+		Bd/cS2xRmhL7UsVlUXCaTJDP/74=
 		</data>
 		<key>PradoSDK.xcconfig</key>
 		<data>
@@ -96,11 +96,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			3/Jr260QAKELCwHsAfUop0lzI5g=
+			WlB37t9LiPoYRhj74qHSH+7OHt0=
 			</data>
 			<key>hash2</key>
 			<data>
-			7l9WG+OD3/GoeipuufkOdYJdKUZqTIKDHSGkoSX3iTI=
+			ebc9Dx4/CSCrqgynnRCziWxLgd8595iMoaKo5aNZtE4=
 			</data>
 		</dict>
 		<key>Headers/PradoSDK.h</key>
@@ -118,66 +118,66 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			9Fhwh8oxAAWRTstioTbIe2lBEZo=
+			oix9FBMLIliVb7k8J6l7twW05eo=
 			</data>
 			<key>hash2</key>
 			<data>
-			3P16xLCT9tboMHFw52WER4PlQkv9KBpYBzg9z8WOjt0=
+			s1gyCXTnbLGUxTLMo9Okl6U77dIusLj8utgpVz0Y2+M=
 			</data>
 		</dict>
 		<key>Modules/PradoSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			aAHvW66o27xbvxK9tLGOZP7WNKM=
+			UKJqmvGf79+UoKcz1eqPzUS3ynw=
 			</data>
 			<key>hash2</key>
 			<data>
-			ul0DlnsW6KdtoZ6bxc9LVSuazCGUpmUhg136ZRkqiFY=
+			4DI2yHHl49UvbTSX09CPC1dM3/h1gegNEShtA1xJ6vs=
 			</data>
 		</dict>
 		<key>Modules/PradoSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			VijX5V0+oy3wBryAVv7SDYimMyk=
+			pFSNT4BQFrIjoyUZzyKa67jtuEM=
 			</data>
 			<key>hash2</key>
 			<data>
-			7ca5r3LLh8zSZ/0gNhpeMHWsRKNHtH9kcg8szvXE8F0=
+			P0Jh9sBZYmWX56l1qajGuhglAqW3erJFkIeDVIWg7xo=
 			</data>
 		</dict>
 		<key>Modules/PradoSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			aAHvW66o27xbvxK9tLGOZP7WNKM=
+			UKJqmvGf79+UoKcz1eqPzUS3ynw=
 			</data>
 			<key>hash2</key>
 			<data>
-			ul0DlnsW6KdtoZ6bxc9LVSuazCGUpmUhg136ZRkqiFY=
+			4DI2yHHl49UvbTSX09CPC1dM3/h1gegNEShtA1xJ6vs=
 			</data>
 		</dict>
 		<key>Modules/PradoSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			T8eIFcfcntfzZA9Mt47tCizBvZY=
+			ALVvAboTRtCVKyOZU6otd1jRyD0=
 			</data>
 			<key>hash2</key>
 			<data>
-			B9hKqZ31Wa8yUEek7q2oXmuzVuLrFUUyOTqtVvVD+tk=
+			DrhpOz2bV6V+W5fIaLfCnTY1q/xHsYBABzD6CfQQz/Q=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			pMIdJHapZ+hkQUtWDb/rkArqK3g=
+			Bd/cS2xRmhL7UsVlUXCaTJDP/74=
 			</data>
 			<key>hash2</key>
 			<data>
-			WCHvNW38B0dVH0iMpC44sK0/PmFFXQxIB2LbMAjSTqY=
+			+L0co3PxWnnEc6g5kwABqDz+rTx1DqiVaIHURnyU+nU=
 			</data>
 		</dict>
 		<key>PradoSDK.xcconfig</key>

@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
-// swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name PradoSDK
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name PradoSDK
+// swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFAudio
 import AdSupport
 import AppTrackingTransparency
@@ -16,7 +17,6 @@ import UIKit
 import WebKit
 import _Concurrency
 import _StringProcessing
-import _SwiftConcurrencyShims
 @objc public enum BannerPosition : Swift.Int {
   case top_center, bottom_center, top_left, top_right, bottom_left, bottom_right, none
   public init?(rawValue: Swift.Int)
@@ -32,7 +32,7 @@ import _SwiftConcurrencyShims
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(Prado) public class Prado : ObjectiveC.NSObject {
   @objc public static let instance: PradoSDK.Prado
-  @objc public func initialize(publisherID: Swift.String, securityToken: Swift.String, delegate: any PradoSDK.PradoInitDelegate)
+  @objc public func initialize(publisherID: Swift.String, securityToken: Swift.String, delegate: PradoSDK.PradoInitDelegate)
   @objc public static func suppressSKANWarnings()
   @objc public static func getSdkVersion() -> Swift.String
   @objc public func isSDKInitialized() -> Swift.Bool
@@ -128,14 +128,14 @@ public enum SDKType : Swift.String, Swift.CaseIterable {
   }
 }
 @_hasMissingDesignatedInitializers @objc(PradoRewardedAd) public class PradoRewardedAd : ObjectiveC.NSObject {
-  @objc public static func load(delegate: any PradoSDK.PradoRewardedDelegate)
+  @objc public static func load(delegate: PradoSDK.PradoRewardedDelegate)
   @objc public func show(viewController: UIKit.UIViewController)
   @objc public func isLoaded() -> Swift.Bool
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(PradoBannerView) @_Concurrency.MainActor(unsafe) public class PradoBannerView : PradoSDK.KPBannerView {
-  @objc @_Concurrency.MainActor(unsafe) public func setDelegate(delegate: any PradoSDK.PradoBannerDelegate)
-  @objc @_Concurrency.MainActor(unsafe) public var delegate: (any PradoSDK.PradoBannerDelegate)?
+  @objc @_Concurrency.MainActor(unsafe) public func setDelegate(delegate: PradoSDK.PradoBannerDelegate)
+  @objc @_Concurrency.MainActor(unsafe) public var delegate: PradoSDK.PradoBannerDelegate?
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init()
   @objc deinit
 }
@@ -149,7 +149,7 @@ public enum SDKType : Swift.String, Swift.CaseIterable {
   @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc(PradoInterstitialAd) public class PradoInterstitialAd : ObjectiveC.NSObject {
-  @objc public static func load(delegate: any PradoSDK.PradoInterstitialDelegate)
+  @objc public static func load(delegate: PradoSDK.PradoInterstitialDelegate)
   @objc public func show(viewController: UIKit.UIViewController)
   @objc public func isLoaded() -> Swift.Bool
   @objc deinit
