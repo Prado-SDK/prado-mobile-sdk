@@ -8,8 +8,8 @@ Check out the [Max Mediation Documentation](https://dash.applovin.com/documentat
 
 To add the adapter to your project with CocoaPods:
 ```
-pod 'PradoSDK', '9.1.5'
-pod 'PradoApplovinAdapter', '1.1.1'
+pod 'PradoSDK', '10.0.0'
+pod 'PradoApplovinAdapter', '2.0.0'
 ```
 ## iOS SKAdNetwork Support
 
