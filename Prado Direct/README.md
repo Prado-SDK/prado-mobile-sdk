@@ -3,9 +3,9 @@
 
 Prado SDK offers support for the following ad types:
 
-+ Interstitial Mediation 
-+ Rewarded Video Mediation 
-+ Banner Mediation 
++ Interstitial
++ Rewarded Video
++ Banner
 
 On the following platforms:
 
@@ -19,4 +19,4 @@ Before publishing your first app please complete the process for [Prado's Publis
 
 ## App-ads.txt
 Please set up [app-ads.txt](https://prado.co/app-ads.txt) for all the apps that use Prado sdk. This will increase your fill rate and earnings and will prevent ad serving being blocked.
-Follow these instructions on how to [Set up an app-ads.txt file for your app](https://prado.co/introappadstext).
+Follow these instructions on how to [Set up an app-ads.txt file for your app](https://www.kidoz.net/intro-app-ads-txt).
