@@ -1,136 +1,137 @@
-# Kidoz iOS Mobile SDK - Swift
+# Prado iOS Mobile SDK - Swift
 
-## Initialize Kidoz SDK
-Call the initialize method with the Publisher ID and Security Token which you received during [Kidoz's Publisher onboarding](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github).
+## Initialize Prado SDK
+Call the initialize method with the Publisher ID and Security Token which you received during [Prado's Publisher onboarding](http://accounts.prado.co/publishers/register?utm_source=prado_github).
 ```Swift
-Kidoz.instance().initialize(withPublisherID: <enter your publisher ID>, securityToken: <enter your security Token>, with: self)
+    Prado.instance.initialize(publisherID: <enter your publisher ID>, securityToken: <enter your security Token>, delegate: <PradoInitDelegate>)
 ```
 
-You can check Kidoz SDK state using the following method:  
+You can check Prado SDK state using the following method:  
 ```Swift
-var initialized = Kidoz.instance().isSDKInitialized();
+    Prado.instance.isSDKInitialized()
 ```
 
-Report the `KidozInitDelegate` protocol's callbacks:  
+Report the `PradoInitDelegate` protocol's callbacks:  
 ```Swift
-func onInitSuccess()
-func onInitError(_ errorMessage: String!)
+    func onInitSuccess()
+    func onInitError(_ error: String)
 ```
 <BR>
 
-## Kidoz iOS Interstitial Ad 
+## Prado iOS Interstitial Ad 
 **Intersitial** is a full screen widget which is designed for showing a full screen advertisement.  
 #### Add support for Interstitial ad unit
 
 Load Interstitial ad: 
 ```Swift
-if Kidoz.instance().isSDKInitialized() {
-   KidozInterstitialAd.load(delegate: self)
-}
+    if Prado.instance.isSDKInitialized() {
+       PradoInterstitialAd.load(delegate: <PradoInterstitialDelegate>)
+    }
 ```
 
 Show Interstitial ad:  
 ```Swift
-if interstitialAd != nil && interstitialAd!.isLoaded() {
-   interstitialAd!.show(viewController: <YourViewController>)
-}
+    if let intestitial = interstitialAd, intestitial.isLoaded() {
+       intestitial.show(viewController: <YourViewController>)
+    }
 ```
 
-Report the `KidozInterstitialDelegate` protocol's callbacks: 
+Report the `PradoInterstitialDelegate` protocol's callbacks: 
 ```Swift  
-func onInterstitialAdLoaded(ad: KidozSDK.KidozInterstitialAd)
-func onInterstitialAdFailedToLoad(error: KidozSDK.KidozError)
-func onInterstitialAdShown(ad: KidozSDK.KidozInterstitialAd)
-func onInterstitialAdFailedToShow(error: KidozSDK.KidozError)
-func onInterstitialImpression()
-func onInterstitialAdClosed(ad: KidozSDK.KidozInterstitialAd)
+    func onInterstitialAdLoaded(pradoInterstitialAd: PradoSDK.PradoInterstitialAd)
+    func onInterstitialAdFailedToLoad(pradoError: PradoSDK.PradoError)    
+    func onInterstitialAdShown(pradoInterstitialAd: PradoSDK.PradoInterstitialAd)   
+    func onInterstitialAdFailedToShow(pradoInterstitialAd: PradoSDK.PradoInterstitialAd, pradoError: PradoSDK.PradoError)    
+    func onInterstitialImpression(pradoInterstitialAd: PradoSDK.PradoInterstitialAd)
+    func onInterstitialAdClosed(pradoInterstitialAd: PradoSDK.PradoInterstitialAd)
 ```
-**Kidoz iOS Interstitial best practices**
+**Prado iOS Interstitial best practices**
 - The preferred timing to show Interstitial Ads: Before the game ends, between game levels, after completing a game level .   
 - Some Interstitial Ads may contain video with sound. In order to maximize the user experience, it is important to mute or pause game background sounds and pause the game while the Interstitial is displayed. This can be achieved by using `-onInterstitialAdShown:` and `-onInterstitialAdClosed:` callbacks:
 ```Swift
-onInterstitialAdShown {
-// mute|pause background sounds
-// pause your game 
-}
+    onInterstitialAdShown {
+        // mute|pause background sounds
+        // pause your game 
+    }
 
-onInterstitialAdClosed {
-// unmute|resume background sounds
-// resume your game 
-}
+    onInterstitialAdClosed {
+        // unmute|resume background sounds
+        // resume your game 
+    }
 ```
 <BR>
 
-## Kidoz iOS Rewarded Ad
+## Prado iOS Rewarded Ad
 **Rewarded**  is a full screen widget which is designed for showing a full screen advertisement.   
 #### Add support for Rewarded ad unit
 
 Load Rewarded ad: 
 ```Swift
-if Kidoz.instance().isSDKInitialized() {
-   KidozRewardedAd.load(delegate: self)
-}
+    if Prado.instance.isSDKInitialized() {
+       PradoRewardedAd.load(delegate: <PradoRewardedDelegate>)
+    }
 ```
 
 Show Rewarded ad:  
 ```Swift
-if rewardedAd != nil && rewardedAd!.isLoaded() {
-   rewardedAd!.show(viewController: <YourViewController>)
-}
+    if let rewarded = rewardedAd, rewarded.isLoaded() {
+        rewarded.show(viewController: baseMainViewController)
+    }
 ```
 
-Report the `KidozRewardedDelegate` protocol's callbacks: 
+Report the `PradoRewardedDelegate` protocol's callbacks: 
 ```Swift  
-func onRewardedAdLoaded(ad: KidozSDK.KidozRewardedAd)
-func onRewardedAdFailedToLoad(error: KidozSDK.KidozError)
-func onRewardedAdShown(ad: KidozSDK.KidozRewardedAd)
-func onRewardedAdFailedToShow(error: KidozSDK.KidozError)
-func onRewardReceived(ad: KidozSDK.KidozRewardedAd)
-func onRewardedImpression()
-func onRewardedAdClosed(ad: KidozSDK.KidozRewardedAd)
+    func onRewardedAdLoaded(pradoRewardedAd: PradoSDK.PradoRewardedAd)
+    func onRewardedAdFailedToLoad(pradoError: PradoSDK.PradoError)
+    func onRewardedAdShown(pradoRewardedAd: PradoSDK.PradoRewardedAd)
+    func onRewardedAdFailedToShow(pradoRewardedAd: PradoSDK.PradoRewardedAd, pradoError: PradoSDK.PradoError)
+    func onRewardReceived(pradoRewardedAd: PradoSDK.PradoRewardedAd)
+    func onRewardedImpression(pradoRewardedAd: PradoSDK.PradoRewardedAd)
+    func onRewardedAdClosed(pradoRewardedAd: PradoSDK.PradoRewardedAd)
 ```
-**Kidoz iOS Rewarded best practices**
+**Prado iOS Rewarded best practices**
 - The preferred timing to show Rewarded Ads: Based on the implementation of rewarded logic in your game.   
 - Some Rewarded Ads may contain video with sound. In order to maximize the user experience, it is important to mute or pause game background sounds and pause the game flow while the Rewarded is displayed. This can be achieved by using `-onRewardedAdShownWithAd:` and `-onRewardedAdClosedWithAd:` callbacks:
 ```Swift
-onRewardedAdShownWithAd {
-//mute/pause background sounds
-//pause your game 
-}
+    onRewardedAdShownWithAd {
+        // mute|pause background sounds
+        // pause your game 
+    }
 
-onRewardedAdClosedWithAd {
-//unmute/resume background sounds
-//resume your game 
-}
+    onRewardedAdClosedWithAd {
+        // unmute|resume background sounds
+        // resume your game 
+    }
 ```
 <BR>
 
-## Kidoz iOS Banner 
+## Prado iOS Banner 
 #### Add support for Banner ad unit
 
 Initialize Banner:
 ```Swift 
-let bannerView = KidozBannerView()
+    let bannerView = PradoBannerView()
+    bannerView.delegate = <PradoBannerDelegate>
 ```
 
 Load and show Banner:  
 ```Swift
-if Kidoz.instance().isSDKInitialized() {
-   bannerView.load()
-}
+    if Prado.instance.isSDKInitialized() {
+       bannerView.load()
+    }
 ``` 
 
 Close Banner:  
 ```Swift
-bannerView.close()
+    bannerView.close()
 ```  
 
-Report the `KidozBannerDelegate` protocol's callbacks: 
+Report the `PradoBannerDelegate` protocol's callbacks: 
 ```Swift
-func onBannerAdLoaded()
-func onBannerAdFailedToLoad(error: KidozSDK.KidozError)
-func onBannerAdShown()
-func onBannerAdFailedToShow(error: KidozSDK.KidozError)
-func onBannerAdImpression()
-func onBannerAdClosed()
+    func onBannerAdLoaded(pradoBannerView: PradoSDK.PradoBannerView)
+    func onBannerAdFailedToLoad(pradoBannerView: PradoSDK.PradoBannerView, error: PradoSDK.PradoError)
+    func onBannerAdShown(pradoBannerView: PradoSDK.PradoBannerView)
+    func onBannerAdFailedToShow(pradoBannerView: PradoSDK.PradoBannerView, error: PradoSDK.PradoError)
+    func onBannerAdImpression(pradoBannerView: PradoSDK.PradoBannerView)
+    func onBannerAdClosed(pradoBannerView: PradoSDK.PradoBannerView)
 ```
