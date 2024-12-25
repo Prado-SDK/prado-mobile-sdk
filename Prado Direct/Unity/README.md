@@ -8,7 +8,7 @@ If you don't have the [External Dependency Manager](https://github.com/googlesam
 2. In the import window select all components. A new Prefabs object named `PradoObject` will appear in the Assets folder. 
 3. Open your requested Scene. 
 4. Drag the `PradoObject` into the selected scene.
-5. Select the `PradoObject` and enter your `Publisher ID` and `Security Token`. To receive these credentials please complete the process for [Prado's Publisher onboarding](http://accounts.prado.co/publishers/register?utm_source=prado_github) if you haven't done so already.
+5. Select the `PradoObject` and enter your `Publisher ID` and `Security Token`. To receive these credentials please complete the process for [Prado's Publisher onboarding](http://accounts.kidoz.net/publishers/register?utm_source=prado_github) if you haven't done so already.
 
 6. If you're having issues with the 'PradoObject' you can open the SampleScene by double clicking it instead.
 
