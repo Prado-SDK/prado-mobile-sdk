@@ -1,7 +1,7 @@
 # Prado iOS Mobile - Objective-C
 
 ## Initialize Prado SDK
-Call the initialize method with the Publisher ID and Security Token which you received during [Prado's Publisher onboarding](http://accounts.prado.co/publishers/register?utm_source=prado_github).
+Call the initialize method with the Publisher ID and Security Token which you received during [Prado's Publisher onboarding](https://accounts.kidoz.net/publishers/register?utm_source=prado_github).
 ```Objective-C 
     [Prado.instance initializeWithPublisherID: <enter your publisher ID> securityToken: <enter your security Token> delegate: <PradoInitDelegate>];
 ```
