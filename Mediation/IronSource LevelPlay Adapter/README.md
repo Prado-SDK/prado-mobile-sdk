@@ -18,12 +18,12 @@ Before publishing your first app please complete the process for [Prado's Publis
 and follow the instructions for [ironSource Custom Adapter setup](https://developers.is.com/ironsource-mobile/general/custom-adapter-setup/).<BR><BR>
 Prado Network ID on ironSource is `15c051899` and you will need to setup the network level parameters with the `Publisher Id` and `Token` you got from Prado:  
   
-  <img width="598" alt="ironSourceNetwork" src="https://user-images.githubusercontent.com/86282008/149078934-107106f0-a526-45bc-9c93-8ca53d5bf3cc.png">
+  <img width="598" alt="ironSourceNetwork" src="https://raw.githubusercontent.com/Prado-SDK/prado-mobile-sdk/refs/heads/docs/Mediation/IronSource%20LevelPlay%20Adapter/is1.png">
 
 ## Ad Network Instance configuration
   On Unity Level Play --> SDK Network --> Prado App Settings page <B>Zone</B> field should be set to 1:<BR>
 
-  <img width="598" alt="Prado Wideget Type Settings" src="https://github.com/Prado-SDK/prado-mobile-sdk/assets/86282008/a6d8b409-587e-425c-b45a-37e4446bfa46">
+  <img width="598" alt="Prado Widget Type Settings" src="https://raw.githubusercontent.com/Prado-SDK/prado-mobile-sdk/refs/heads/docs/Mediation/IronSource%20LevelPlay%20Adapter/is2.png">
 
 ## App-ads.txt
 Please set up [app-ads.txt](https://prado.co/app-ads.txt) for all the apps that use Prado sdk. This will increase your fill rate and earnings and will prevent ad serving being blocked.
