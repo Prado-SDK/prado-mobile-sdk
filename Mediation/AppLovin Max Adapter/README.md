@@ -24,7 +24,7 @@ Custom Network Name: Prado
 iOS Adapter Class Name: PradoMediationAdapter
 Android / Fire OS Adapter Class Name: com.applovin.mediation.adapters.PradoMediationAdapter
 ```
-<img width="800" alt="AppLovinCustomNetwork" src="https://user-images.githubusercontent.com/86282008/197710543-171fe5fc-9c5e-414b-96ab-07f3b28de708.png">  
+<img width="800" alt="AppLovinCustomNetwork" src="https://raw.githubusercontent.com/Prado-SDK/prado-mobile-sdk/refs/heads/docs/Mediation/AppLovin%20Max%20Adapter/applovin1.png">  
   
 Once the Prado Network is properly configured you will now be able to enable and configure the Prado Ad Data in your App's Ad Unit waterfall.<BR>
 
@@ -34,7 +34,7 @@ Replace KIDOZ_PUBLISHER_ID and KIDOZ_SECURITY_TOKEN with the publisher id and to
 ```
 Place the json string in the Custom Parameters field and save.
   
-  <img width="800" alt="AppLovin AdUnit Config" src="https://user-images.githubusercontent.com/86282008/197715891-2a6501d4-741e-4322-9343-fcbfe49db1a2.png">
+  <img width="800" alt="AppLovin AdUnit Config" src="https://raw.githubusercontent.com/Prado-SDK/prado-mobile-sdk/refs/heads/docs/Mediation/AppLovin%20Max%20Adapter/applovin2.png">
 
 ## App-ads.txt
 Please set up [app-ads.txt](https://prado.co/app-ads.txt) for all the apps that use Prado sdk. This will increase your fill rate and earnings and will prevent ad serving being blocked.
