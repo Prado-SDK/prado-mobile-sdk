@@ -31,6 +31,10 @@ public class MainCode : MonoBehaviour, IScreenLogger
 
     protected void initSDK()
     {
+        const string publisher_id = "14428";
+		const string token = "6yAsKUngaG5yC4X5HsRoatKTso40NMoZ";
+
+        Prado.init(publisher_id, token);
         Prado.SetiOSAppPauseOnBackground(true);
 
         //Delegates
@@ -121,7 +125,7 @@ public class MainCode : MonoBehaviour, IScreenLogger
     public void loadInterstitial()
     {
         AddEvent("----- Load Interstitial --");
-        Prado.loadInterstitialAd(false);
+        Prado.loadInterstitialAd();
     }
 
     public void showInterstitial()
@@ -165,7 +169,7 @@ public class MainCode : MonoBehaviour, IScreenLogger
     public void loadRewarded()
     {
         AddEvent("----- Load Rewarded --");
-        Prado.loadRewardedAd(false);
+        Prado.loadRewardedAd();
     }
 
     public void showRewarded()

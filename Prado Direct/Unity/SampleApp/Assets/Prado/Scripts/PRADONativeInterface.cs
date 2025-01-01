@@ -5,7 +5,7 @@ namespace PRADONativeInterface {
 		// interface members
 		bool isInitialised();
 
-		void init(string developerID, string securityToken,string pluginVersion);
+		void init(string developerID, string securityToken, string pluginVersion);
 
 		void loadBanner(bool autoShow, int position);
 
@@ -18,9 +18,9 @@ namespace PRADONativeInterface {
 		//***** INTERSTITIAL & REWARDED *****//
 		//***********************************//
 
-		void loadInterstitialAd(bool autoShow);
+		void loadInterstitialAd();
 
-		void loadRewardedAd(bool autoShow);
+		void loadRewardedAd();
 
 		void showInterstitial();
 

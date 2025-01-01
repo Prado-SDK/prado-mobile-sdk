@@ -43,10 +43,10 @@ namespace PRADOiOSInterface {
 		
 		[DllImport("__Internal")]
 		private static extern void PradoLogMessage(string message);
-
+		
 		[DllImport("__Internal")]
 		private static extern IntPtr PradoGetSDKVersion();
-			
+
 		[DllImport("__Internal")]
 		private static extern void PradoLoadInterstitialAd();
 		

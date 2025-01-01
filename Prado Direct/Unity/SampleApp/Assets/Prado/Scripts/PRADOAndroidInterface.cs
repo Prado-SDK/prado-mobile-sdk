@@ -28,7 +28,7 @@ namespace PRADOAndroidInterface {
 			string prado_name = PradoSDK.Prado.Instance.gameObject.name;
 
 			//init Prado
-			using (var pradoBridgeClass = new AndroidJavaClass ("com.prado.sdk.api.platforms.PradoUnityBridge")) {
+			using (var pradoBridgeClass = new AndroidJavaClass ("co.prado.platforms.PradoUnityBridge")) {
 
 				pradoBridgeObject = pradoBridgeClass.CallStatic<AndroidJavaObject> ("getInstance", activityContext);
 
@@ -45,20 +45,24 @@ namespace PRADOAndroidInterface {
 
 			return pradoBridgeObject.Call<bool>("isInitialised");
 		}
+
+		public string getSdkVersion(){
+			if (pradoBridgeObject == null) {
+				return "----";
+			}
+
+			return pradoBridgeObject.Call<string>("getSDKVersion");
+			
+		}
 			
 		
 		//***********************************//
 		//***** INTERSTITIAL & REWARDED *****//
 		//***********************************//
 
-		public void loadInterstitialAd(bool autoShow)
+		public void loadInterstitialAd()
 		{
-			pradoBridgeObject.Call("loadInterstitialAd",autoShow);
-		}
-
-		public void generateInterstitial()
-		{
-			pradoBridgeObject.Call("loadInterstitialAd",false);
+			pradoBridgeObject.Call("loadInterstitialAd");
 		}
 
 		public void showInterstitial()
@@ -71,14 +75,9 @@ namespace PRADOAndroidInterface {
 			return pradoBridgeObject.Call<bool>("getIsInterstitialLoaded");
 		}
 
-		public void loadRewardedAd(bool autoShow)
+		public void loadRewardedAd()
 		{
-			pradoBridgeObject.Call("loadRewardedAd",autoShow);
-		}
-		
-		public void generateRewarded()
-		{
-			pradoBridgeObject.Call("loadRewardedAd",false);
+			pradoBridgeObject.Call("loadRewardedAd");
 		}
 		
 		public void showRewarded()
@@ -106,8 +105,6 @@ namespace PRADOAndroidInterface {
 			pradoBridgeObject.Call("setBannerPosition", position);
 		}
 
-
-
 		public void showBanner()
 		{
 			pradoBridgeObject.Call ("showBannerAd");
@@ -117,9 +114,6 @@ namespace PRADOAndroidInterface {
 		{
 			pradoBridgeObject.Call ("hideBannerAd");
 		}
-
-
-
 
 		public void logMessage(string message)
 		{

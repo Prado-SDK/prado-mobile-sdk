@@ -19,8 +19,6 @@ namespace PradoSDK
 	public class Prado :MonoBehaviour
 	{
 
-		
-
 		public enum PANEL_TYPE
 		{
 			BOTTOM = 0, TOP = 1, LEFT = 2, RIGHT = 3
@@ -30,7 +28,6 @@ namespace PradoSDK
 		{
 			START, CENTER, END
 		};
-		
 		
 		public enum BANNER_POSITION
 		{
@@ -66,34 +63,6 @@ namespace PradoSDK
 				pradoin.loadBanner (isAutoShow, (int)position);
 			}
 		}
-
-
-		class InterstitialAdLoader : IAdLoader{
-
-			public bool isAutoShow = false;
-
-			public InterstitialAdLoader (bool isAutoShow) {
-				this.isAutoShow = isAutoShow;
-			}
-
-			public void LoadAd (){
-				pradoin.loadInterstitialAd (isAutoShow);
-			}
-		}
-
-		class RewardedAdLoader : IAdLoader{
-
-			public bool isAutoShow = false;
-
-			public RewardedAdLoader (bool isAutoShow){
-				this.isAutoShow = isAutoShow;
-			}
-
-			public void LoadAd (){
-				pradoin.loadRewardedAd (isAutoShow);
-			}
-		}
-
 
 		public static ArrayList adLoaderArray = new ArrayList ();
 
@@ -152,11 +121,16 @@ namespace PradoSDK
 		static private bool initFlag = false;
 		static private bool mPause = false;
 
-		static private string staticPublisherID ;
-		static private string staticSecurityToken;
+		static private string PLUGIN_VERSION = "10.0.0";
 
-		static private string PLUGIN_VERSION = "1.0.0";
-
+		private static Prado instance;
+		public static Prado Instance
+		{
+			get
+			{
+				return instance;
+			}
+		}
 
 #if UNITY_IOS
 		private static PRADOiOSInterface.PRADOiOSInterface pradoin = new PRADOiOSInterface.PRADOiOSInterface();
@@ -164,75 +138,7 @@ namespace PradoSDK
 		private static PRADOAndroidInterface.PRADOAndroidInterface pradoin = new PRADOAndroidInterface.PRADOAndroidInterface();
 #else
 		private static PRADODummyInterface.PRADODummyInterface pradoin = new PRADODummyInterface.PRADODummyInterface ( );
-#endif
-		
-		
-		public const string PRADO_OBJECT_NAME = "PradoObject";
-		
-		
-		#region Singelton
-		
-		static private Prado instance = null;
-
-		private void SetStaticVars () {
-			staticPublisherID = PublisherID;
-			staticSecurityToken = SecurityToken;
-		}
-
-		private static void InitWithStaticVars () {
-			if (!string.IsNullOrEmpty (staticPublisherID) && !string.IsNullOrEmpty (staticSecurityToken)) {
-				init (staticPublisherID, staticSecurityToken);
-			}
-		}
-
-		public static Prado Instance
-		{
-			get
-			{
-				if (instance == null)
-				{
-					SetInstance ( Create ( ) );
-				}
-				return instance;
-			}
-		}
-		
-		
-		static void SetInstance (Prado _instance)
-		{
-			instance = _instance;
-			DontDestroyOnLoad ( instance.gameObject );
-		}
-		
-		void Awake ()
-		{
-			if (instance == null)
-			{
-				SetInstance ( this );
-
-				if (!string.IsNullOrEmpty ( PublisherID ) && !string.IsNullOrEmpty ( SecurityToken ))
-				{
-					init ( PublisherID, SecurityToken );
-				}
-			}
-			else
-			{
-				print ( "Prado | not allowed multiple instances" );
-				Destroy ( gameObject );
-			}
-		}
-		
-		public static Prado Create ()
-		{
-			if (instance == null)
-			{
-				GameObject singleton = new GameObject ( PRADO_OBJECT_NAME );
-				return singleton.AddComponent<Prado> ( );
-			}
-			return null;
-		}
-		
-		#endregion
+#endif	
 		
 		
 		public static void SetiOSAppPauseOnBackground(Boolean pause){
@@ -246,18 +152,10 @@ namespace PradoSDK
 				return;
 			}
 			initFlag = true;
-			if (instance == null)
-			{
-				SetInstance ( Create ( ) );
-				//instance.PublisherID = developerID;
-				//instance.SecurityToken = securityToken;
-			}
-			else
-			{
-				print ( "Prado | in init function ==> instance != null" );
-			}
 			print ( "Prado | init:" + developerID + "," + securityToken /*+ "," + "-->" + instance.PublisherID + "," + instance.SecurityToken*/ );
-			pradoin.init ( developerID, securityToken,PLUGIN_VERSION );
+			GameObject gameObject = new GameObject("PradoObject");
+			instance = gameObject.AddComponent<Prado>();
+			pradoin.init ( developerID, securityToken, PLUGIN_VERSION );
 		}
 		
 		
@@ -270,6 +168,10 @@ namespace PradoSDK
 			return pradoin.isInitialised ( );
 		}
 
+		public static string getSdkVersion() 
+		{
+			return pradoin.getSdkVersion();
+		}
 
 		//Basic function creation function.
 		//Since Prado SDK should be activated only once use this function to create 
@@ -286,72 +188,20 @@ namespace PradoSDK
 		// return:
 		//		0 	- the function worked correctly
 		//		NO_GAME_OBJECT	- there is no Prado gameobject 
-		public static int loadInterstitialAd (bool isAutoShow){
+		public static int loadInterstitialAd () {
 
-			pradoin.loadInterstitialAd (isAutoShow);
+			pradoin.loadInterstitialAd ();
 			return 0;
 
-		    /*if (!isInitialised()) {
-				IAdLoader adLoader = new InterstitialAdLoader (isAutoShow);
-				adLoaderArray.Add (adLoader);
-				InitWithStaticVars ();
-
-			} else
-			pradoin.loadInterstitialAd ( isAutoShow );
-			return 0;*/
 		}
 		
-		public static int loadRewardedAd (bool isAutoShow){
+		public static int loadRewardedAd (){
 
-			pradoin.loadRewardedAd (isAutoShow);
+			pradoin.loadRewardedAd ();
 			return 0;
 
-			/*if (!isInitialised ()) {
-				IAdLoader adLoader = new RewardedAdLoader (isAutoShow);
-				adLoaderArray.Add (adLoader);
-				InitWithStaticVars ();
-
-			} else
-				pradoin.loadRewardedAd ( isAutoShow );
-			return 0;*/
 		}
-		
-		// Description: generate the interstitial object
-		// Parameters: 
-		// 		 
-		// return:
-		//		0 	- the function worked correctly
-		//		NO_GAME_OBJECT	- there is no Prado gameobject 
-		public static int generateInterstitial (){
 
-			pradoin.generateInterstitial ();
-			return 0;
-
-		 /*if (!isInitialised ()) {
-				IAdLoader adLoader = new InterstitialAdLoader (false);
-				adLoaderArray.Add (adLoader);
-				InitWithStaticVars ();
-
-			} else
-				pradoin.generateInterstitial ( );
-			return 0;*/
-		}
-		
-		public static int generateRewarded (){
-
-			pradoin.generateRewarded ();
-			return 0;
-
-			/*if (!isInitialised ()) {
-				IAdLoader adLoader = new RewardedAdLoader (false);
-				adLoaderArray.Add (adLoader);
-				InitWithStaticVars ();
-
-			} else
-
-				pradoin.generateRewarded ( );
-			return 0;*/
-		}
 		
 		// Description: show the interstitial add that was loaded
 		// Parameters: 
@@ -406,14 +256,6 @@ namespace PradoSDK
 			pradoin.loadBanner (isAutoShow, (int)position);
 			return 0;
 
-
-			/*if (!isInitialised()) {
-				IAdLoader adLoader = new BannerAdLoader (isAutoShow, position);
-				adLoaderArray.Add (adLoader);
-				InitWithStaticVars ();
-			} else
-				pradoin.loadBanner ( isAutoShow, (int) position );
-			return 0;*/
 		}
 		
 		// Description: set Banner Position 
