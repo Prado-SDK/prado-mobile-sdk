@@ -1,4 +1,19 @@
-# macOS
-.DS_Store
+*.DS_Store
+
+# Xcode
+xcuserdata/
+*.xcframework
+.build/
+
+# CocoaPods
+Podfile.lock
+Pods/
+*.xcworkspace
+
+DerivedData/
+
+## Obj-C/Swift specific
+*.hmap
+
 Prado Direct/Unity/SampleApp/Build_BurstDebugInformation_DoNotShip
 Prado Direct/Unity/SampleApp/Build
