@@ -28,9 +28,9 @@ Android / Fire OS Adapter Class Name: com.applovin.mediation.adapters.PradoMedia
   
 Once the Prado Network is properly configured you will now be able to enable and configure the Prado Ad Data in your App's Ad Unit waterfall.<BR>
 
-Replace KIDOZ_PUBLISHER_ID and KIDOZ_SECURITY_TOKEN with the publisher id and token you received from Prado when you created your publisher account.
+Replace PUBLISHER_ID and SECURITY_TOKEN with the publisher id and token you received from Prado when you created your publisher account.
 ```java
-  {"publisher_id":"KIDOZ_PUBLISHER_ID","token":"KIDOZ_SECURITY_TOKEN"}
+  {"publisher_id":"PUBLISHER_ID","token":"SECURITY_TOKEN"}
 ```
 Place the json string in the Custom Parameters field and save.
   
