@@ -22,8 +22,8 @@ import com.kpadplayer.sdk.ads.banner.KPBannerView
 
 class MainActivity : Activity() {
 
-    private val PUBLISHER_ID: String = "14428"
-    private val TOKEN: String = "6yAsKUngaG5yC4X5HsRoatKTso40NMoZ"
+    private val PUBLISHER_ID: String = "15492"
+    private val TOKEN: String = "4b4982c7c7429ba2006852c2ef9f684f"
 
     private var pradoInterstitialAd: PradoInterstitialAd? = null
     private var pradoRewardedAd: PradoRewardedAd? = null
