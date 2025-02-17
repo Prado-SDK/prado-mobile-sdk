@@ -5,8 +5,7 @@
 #### Include the following inside your app build.gradle dependencies:
 ```groovy
 dependencies {
-    implementation 'org.greenrobot:eventbus:3.3.1'
-    implementation 'net.prado.sdk:prado-android-native:9.1.2'
+    implementation 'net.prado.sdk:prado-android-native:10.0.1'
 }
 ``` 
 
