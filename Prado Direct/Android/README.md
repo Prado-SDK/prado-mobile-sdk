@@ -52,28 +52,26 @@ val mInterstitialAd : PradoInterstitialAd? = null
 PradoInterstitialAd.load(this, object : PradoInterstitialAdCallback {
     override fun onAdLoaded(ad: PradoInterstitialAd) {
         pradoInterstitialAd = ad
-       // onInterstitialLoaded()
     }
 
     override fun onAdFailedToLoad(error: PradoError) {
-       // onInterstitialLoadFailed(...)
+
     }
 
     override fun onAdShown(ad: PradoInterstitialAd) {
-        // onInterstitialShown()
+
     }
 
     override fun onAdFailedToShow(ad: PradoInterstitialAd, error: PradoError) {
-       // onInterstitialShowFailed(...)
+        pradoInterstitialAd = null
     }
 
     override fun onAdImpression(ad: PradoInterstitialAd) {
-       // onInterstitialImpression()
+
     }
 
     override fun onAdClosed(ad: PradoInterstitialAd) {
         pradoInterstitialAd = null
-        // onInterstitialClosed()
     }
 
 })  
@@ -99,33 +97,30 @@ var pradoRewardedAd: PradoRewardedAd? = null
 PradoRewardedAd.load(this, object : PradoRewardedAdCallback {
     override fun onAdLoaded(ad: PradoRewardedAd) {
         pradoRewardedAd = ad
-       // onRewardedLoaded()
     }
 
     override fun onAdFailedToLoad(error: PradoError) {
-       // onRewardedLoadFailed(...)
+
     }
 
     override fun onAdShown(ad: PradoRewardedAd) {
-      //  onRewardedShown()
+
     }
 
     override fun onAdFailedToShow(ad: PradoRewardedAd, error: PradoError) {
-      // onRewardedShowFailed(...)
         pradoRewardedAd = null
     }
 
     override fun onAdImpression(ad: PradoRewardedAd) {
-      //  onRewardedImpression()
+
     }
 
     override fun onRewardReceived(ad: PradoRewardedAd) {
-      //  onRewardAchieved()
+
     }
 
     override fun onAdClosed(ad: PradoRewardedAd) {
         pradoRewardedAd = null
-       // onRewardedClosed()
     }
 
 })
