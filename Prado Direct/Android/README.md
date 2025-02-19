@@ -5,15 +5,14 @@
 #### Include the following inside your app build.gradle dependencies:
 ```groovy
 dependencies {
-    implementation 'org.greenrobot:eventbus:3.3.1'
-    implementation 'net.prado.sdk:prado-android-native:9.1.2'
+    implementation 'co.prado.sdk:prado-android-native:10.0.1'
 }
 ``` 
 
 ## SDK initialization
 The SDK should be initialized only once in an Activity lifecycle. 
 
-You may run the Sample App with Prado's <B>sample</B> `publisherID` and `securityToken` provided in the sample code but <B>be sure not to publish your app with them</B>. 
+You may run the Sample App with Prado's <B>sample</B> `PUBLISHER_ID` and `TOKEN` provided in the sample code but <B>be sure not to publish your app with them</B>. 
 
 </br>
 Initialize the SDK inside your MainActivity's onCreate.
@@ -25,122 +24,107 @@ Initialize the SDK inside your MainActivity's onCreate.
 protected void onCreate(Bundle savedInstanceState)
 {
     ....
-    Prado.initialize(MainActivity.this, PUBLISHER_ID, TOKEN, new SDKInitializationListener() {
-        @Override
-        public void onInitSuccess() {
+    Prado.initialize(this, PUBLISHER_ID, TOKEN, object : PradoInitializationListener {
+
+        override fun onInitSuccess() {
             //SDK Init | Success().
         }
 
-        @Override
-        public void onInitError(String error) {
+        override fun onInitError(error: PradoError) {
             //SDK Init | Error
         }
-    });    
-    //the rest of your main activity onCreate
+
+    })    
     ...
 }
 ```
 
 ## Prado Interstitial
-The Prado InterstitialAd is a full screen single ad unit.
+The PradoInterstitialAd is a full screen single ad unit.
 
 #### Displaying Interstitial Ads
 
-To use the Interstitial Ad you first need to load an Ad instance with an InterstitialAdCallback listener :
+To use the Interstitial Ad you first need to load an Ad instance with an PradoInterstitialAdCallback listener :
 
 ```java
-InterstitialAd mInterstitialAd;
+val mInterstitialAd : PradoInterstitialAd? = null
 
-InterstitialAd.load(<Activity>, new InterstitialAdCallback() {
-    @Override
-    public void onAdLoaded(InterstitialAd ad) {
-        mInterstitialAd = ad;
-        // onInterstitialLoaded();
+PradoInterstitialAd.load(this, object : PradoInterstitialAdCallback {
+    override fun onAdLoaded(ad: PradoInterstitialAd) {
+        pradoInterstitialAd = ad
     }
 
-    @Override
-    public void onAdFailedToLoad(PradoError error) {
-        // onInterstitialLoadFailed(...);
+    override fun onAdFailedToLoad(error: PradoError) {
+
     }
 
-    @Override
-    public void onAdShown(InterstitialAd ad) {
-        // onInterstitialShown();
+    override fun onAdShown(ad: PradoInterstitialAd) {
+
     }
 
-    @Override
-    public void onAdFailedToShow(PradoError error) {
-       //  onInterstitialShowFailed(...);
+    override fun onAdFailedToShow(ad: PradoInterstitialAd, error: PradoError) {
+        pradoInterstitialAd = null
     }
 
-    @Override
-    public void onAdImpression() {
-        // onInterstitialImpression();
+    override fun onAdImpression(ad: PradoInterstitialAd) {
+
     }
 
-    @Override
-    public void onAdClosed(InterstitialAd ad) {
-        // onInterstitialClosed();
+    override fun onAdClosed(ad: PradoInterstitialAd) {
+        pradoInterstitialAd = null
     }
-});
+
+})  
+
 ```
-
-
 
 In order to show the ad once it is loaded call:
 
 ```java
-mInterstitialAd.show();
+mInterstitialAd.show()
 ```
 
 ## Prado Rewarded
-Prado RewardedAd is a full screen single ad unit.
+PradoRewardedAd is a full screen single ad unit.
 
 #### Displaying Rewarded Ads
 
-To use the Rewarded Ad you first need to load an Ad instance with a RewardedAdCallback listener :
+To use the Rewarded Ad you first need to load an Ad instance with a PradoRewardedAdCallback listener :
 
 ```java
-RewardedAd mRewardedAd;
+var pradoRewardedAd: PradoRewardedAd? = null
 
-RewardedAd.load(MainActivity.this, new RewardedAdCallback() {
-    @Override
-    public void onAdLoaded(RewardedAd ad) {
-        mRewardedAd = ad;
-        // onRewardedLoaded();
+PradoRewardedAd.load(this, object : PradoRewardedAdCallback {
+    override fun onAdLoaded(ad: PradoRewardedAd) {
+        pradoRewardedAd = ad
     }
 
-    @Override
-    public void onAdFailedToLoad(PradoError error) {
-        // onRewardedLoadFailed(...);
+    override fun onAdFailedToLoad(error: PradoError) {
+
     }
 
-    @Override
-    public void onAdShown(RewardedAd ad) {
-        // onRewardedShown();
+    override fun onAdShown(ad: PradoRewardedAd) {
+
     }
 
-    @Override
-    public void onAdFailedToShow(PradoError error) {
-        // onRewardedShowFailed(...);
+    override fun onAdFailedToShow(ad: PradoRewardedAd, error: PradoError) {
+        pradoRewardedAd = null
     }
 
-    @Override
-    public void onAdImpression() {
-        // onRewardedImpression();
+    override fun onAdImpression(ad: PradoRewardedAd) {
+
     }
 
-    @Override
-    public void onAdClosed(RewardedAd ad) {
-        // onRewardedClosed();
+    override fun onRewardReceived(ad: PradoRewardedAd) {
+
     }
 
-    @Override
-    public void onRewardReceived() {
-        // onRewardAchieved();
+    override fun onAdClosed(ad: PradoRewardedAd) {
+        pradoRewardedAd = null
     }
 
-});
+})
+    
 ```
 
 
@@ -148,7 +132,7 @@ RewardedAd.load(MainActivity.this, new RewardedAdCallback() {
 In order to show the ad once it is loaded call:
 
 ```java
-mRewardedAd.show();
+mRewardedAd.show()
 ```
 
 ## Prado Banner
@@ -159,48 +143,43 @@ PradoBannerView is a view that shows banner ads.
 
 * Create a PradoBannerView instance:
 ```java
-PradoBannerView pradoBannerView = new PradoBannerView(<Activity>); 
+var pradoBannerView = new PradoBannerView(<Activity>); 
 ```
 
 * Set banner position:
 ```java
-pradoBannerView.setBannerPosition(BANNER_POSITION.TOP_CENTER / BOTTOM_CENTER); 
+pradoBannerView.setBannerPosition(PradoBannerView.Position.BOTTOM_CENTER); 
 ```
 
 * Set banner listener:
 ```java 
-pradoBannerView.setPradoBannerListener(new BannerAdCallback() {
+pradoBannerView!!.setBannerCallback(object : PradoBannerAdCallback {
+    override fun onAdLoaded() {
+       
+    }
 
-            @Override
-            public void onAdLoaded() {
-                // onBannerLoaded();
-            }
+    override fun onAdFailedToLoad(error: PradoError) {
+      
+      
+    }
 
-            @Override
-            public void onAdFailedToLoad(PradoError error) {
-                // onBannerLoadFailed(...);
-            }
+    override fun onAdShown() {
+        
+    }
 
-            @Override
-            public void onAdShown() {
-               // onBannerShown();
-            }
+    override fun onAdFailedToShow(error: PradoError) {
+        
+    }
 
-            @Override
-            public void onAdFailedToShow(PradoError error) {
-               // onBannerShowFailed(...);
-            }
+    override fun onAdImpression() {
+        
+    }
 
-            @Override
-            public void onAdImpression() {
-                // onBannerImpression();
-            }
-
-            @Override
-            public void onAdClosed() {
-                // onBannerClosed();
-            }
-        });
+    override fun onAdClosed() {
+        
+    }
+})
+    
 ```
 
 * Call banner load before showing:
@@ -216,13 +195,13 @@ pradoBannerView.show();
 
 * To hide banner:
 ```java
-pradoBannerView.hide(); 
+pradoBannerView.close(); 
 ```
 
 ### Showing PradoBannerView in View Hierarchy
 * Add PradoBannerView to your layout (in xml):
 ```xml
-            <com.prado.sdk.api.ads.banner.PradoBannerView
+            <co.prado.ads.banners.PradoBannerView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/<YOUR_ID_NAME>"/>
@@ -253,5 +232,5 @@ pradoBannerView.show();
 
 * To hide banner:
 ```java
-pradoBannerView.hide(); 
+pradoBannerView.close(); 
 ```
