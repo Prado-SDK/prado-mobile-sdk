@@ -29,7 +29,7 @@ public class MainViewHandler: NSObject, MainViewControllerHandler, PradoInitDele
     }
     
     public func initSDK() {
-        Prado.instance.initialize(publisherID: "14428", securityToken: "6yAsKUngaG5yC4X5HsRoatKTso40NMoZ", delegate: self)
+        Prado.instance.initialize(publisherID: "15492", securityToken: "4b4982c7c7429ba2006852c2ef9f684f", delegate: self)
     }
     
     public func onInitSuccess() {
