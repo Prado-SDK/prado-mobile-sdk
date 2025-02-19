@@ -36,8 +36,8 @@ android {
 }
 
 dependencies {
-    implementation("co.prado.sdk:prado-android-native:10.0.0")
-    implementation("com.kpadplayer.sdk:kpadplayer-android-native:10.0.0")
+    implementation("co.prado.sdk:prado-android-native:10.0.1")
+    implementation("com.kpadplayer.sdk:kpadplayer-android-native:10.0.1")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
