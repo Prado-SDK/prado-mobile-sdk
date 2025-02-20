@@ -10,9 +10,9 @@ Include the following inside your app build.gradle dependencies:
 
 ```java
 dependencies {
-    implementation 'org.greenrobot:eventbus:3.3.1'
-    implementation 'net.prado.sdk:prado-android-native:9.1.2'
-    implementation 'net.prado.sdk:prado-android-applovin-adapter:1.1.0'
+    implementation("co.prado.sdk:prado-android-native:10.0.1")
+    implementation("com.kpadplayer.sdk:kpadplayer-android-native:10.0.1")
+    implementation("co.prado.sdk:prado-android-applovin-adapter:2.0.1")
 }
 ```
 
