@@ -35,6 +35,11 @@ namespace PRADODummyInterface
 			return true;
 		}
 
+		public string getSdkVersion()
+		{
+			return "";
+		}
+
 		public void loadBanner (bool autoShow, int position)
 		{
 			DebugLog ( "loadBanner, autoShow=" + autoShow + ", position=" + position );

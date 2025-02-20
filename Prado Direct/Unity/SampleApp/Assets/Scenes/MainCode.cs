@@ -31,8 +31,8 @@ public class MainCode : MonoBehaviour, IScreenLogger
 
     protected void initSDK()
     {
-        const string publisher_id = "14428";
-		const string token = "6yAsKUngaG5yC4X5HsRoatKTso40NMoZ";
+        const string publisher_id = "15492";
+		const string token = "4b4982c7c7429ba2006852c2ef9f684f";
 
         Prado.init(publisher_id, token);
         Prado.SetiOSAppPauseOnBackground(true);
