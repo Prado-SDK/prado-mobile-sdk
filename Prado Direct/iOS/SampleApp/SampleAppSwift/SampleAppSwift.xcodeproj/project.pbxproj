@@ -386,6 +386,7 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = V79KVWWJ4G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SampleAppSwift/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Prado Sample App";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = Main;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -429,6 +430,7 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = V79KVWWJ4G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SampleAppSwift/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Prado Sample App";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = Main;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
