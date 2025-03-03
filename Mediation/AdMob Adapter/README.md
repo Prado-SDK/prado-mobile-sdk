@@ -42,7 +42,7 @@ On the Add mapping step set the Class Name and Parameter fields:<BR>
 - Set the following json string in the `Parameter (optional)` field: </br>
 `{"AppID":"publisherId", "Token":"publisherToken"}`
 
-- Replace `publisherId` and `publisherToken` with the credentials received during [Prado's Publisher onboarding](http://accounts.kidoz.net/publishers/register?utm_source=prado_github).
+- Replace `publisherId` and `publisherToken` with the credentials received during [Prado's Publisher onboarding](http://accounts.prado.co/publishers/register?utm_source=prado_github).
 
 <img width="800" src="https://raw.githubusercontent.com/Prado-SDK/prado-mobile-sdk/refs/heads/docs/Mediation/AdMob%20Adapter/CustomEvent3.png"> 
 
