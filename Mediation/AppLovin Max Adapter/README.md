@@ -14,7 +14,7 @@ On the following platforms:
 
 ## Prerequisites
 
-Before publishing your first app please complete the process for [Prado's Publisher onboarding](http://accounts.kidoz.net/publishers/register?utm_source=prado_github). <BR>
+Before publishing your first app please complete the process for [Prado's Publisher onboarding](http://accounts.prado.co/publishers/register?utm_source=prado_github). <BR>
 
 Follow instructions on the [AppLovin Custom SDK Network Integration Guide](https://dash.applovin.com/documentation/mediation/android/mediation-setup/custom-sdk).
 
