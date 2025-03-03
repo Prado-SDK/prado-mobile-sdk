@@ -19,8 +19,16 @@ Before publishing your first app please complete the process for [Prado's Publis
 Please set up [app-ads.txt](https://prado.co/app-ads.txt) for all the apps that use Prado sdk. This will increase your fill rate and earnings and will prevent ad serving being blocked.
 Follow these instructions on how to [Set up an app-ads.txt file for your app](https://www.prado.co/intro-app-ads-txt).
 
-## CPM Setup
+## Custom Event and CPM Setup
 You will need to define your Admob Ad Units CPM and align them with Prado eCPM displayed in your Prado dashboard. Contact a Prado publisher representative for more information at sdk@prado.co
+
+In the Manage Network form you should enter the following data:
+```
+Custom Network Name: Prado 
+iOS Adapter Class Name: PradoMediationAdapter
+Android / Fire OS Adapter Class Name: com.applovin.mediation.adapters.PradoMediationAdapter
+```
+<img width="800" src="https://raw.githubusercontent.com/Prado-SDK/prado-mobile-sdk/refs/heads/docs/Mediation/AdMob%20Adapter/CustomEvent1.png">  
 
 ## Important note:
 While mapping the Prado Ad unit on Admob, it is highly recommended to run some JSON validator on the parameters passed to the Class name (AppID and Token). This method may minimize parsing mistakes that may arise on initial connection.
