@@ -17,7 +17,7 @@ dependencies {
 Follow instructions on how to [Set Up Custom Events](https://developers.google.com/admob/android/custom-events/setup#create) on the AdMob dashboard and set up Prado's adapter class:
 
 - Set the following full path in the `Class Name` field: </br>
-`com.prado.mediation.admob.adapters.PradoAdMobAdapter`
+`co.prado.mediation.admob.adapters.PradoAdMobAdapter`
 
 - Set the following json string in the `Parameter (optional)` field: </br>
 `{"AppID":"publisherId", "Token":"publisherToken"}` <B>*</B>
