@@ -22,4 +22,4 @@ Follow instructions on how to [Set Up Custom Events](https://developers.google.c
 - Set the following json string in the `Parameter (optional)` field: </br>
 `{"AppID":"publisherId", "Token":"publisherToken"}` <B>*</B>
 
-- Replace `publisherId` and `publisherToken` with the credentials received during [Prado's Publisher onboarding](http://accounts.kidoz.net/publishers/register?utm_source=prado_github).
+- Replace `publisherId` and `publisherToken` with the credentials received during [Prado's Publisher onboarding](http://accounts.prado.co/publishers/register?utm_source=prado_github).
