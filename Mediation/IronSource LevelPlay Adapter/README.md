@@ -14,7 +14,7 @@ On the following platforms:
 
 ## Prerequisites
   
-Before publishing your first app please complete the process for [Prado's Publisher onboarding](http://accounts.kidoz.net/publishers/register?utm_source=prado_github)  
+Before publishing your first app please complete the process for [Prado's Publisher onboarding](http://accounts.prado.co/publishers/register?utm_source=prado_github)  
 and follow the instructions for [ironSource Custom Adapter setup](https://developers.is.com/ironsource-mobile/general/custom-adapter-setup/).<BR><BR>
 Prado Network ID on ironSource is `15c051899` and you will need to setup the network level parameters with the `Publisher Id` and `Token` you got from Prado:  
   
