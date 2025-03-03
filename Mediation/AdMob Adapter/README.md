@@ -37,7 +37,7 @@ On the Add mapping step set the Class Name and Parameter fields:<BR>
 `PradoAdmobAdapter`
 
 - For Android set the following full path in the `Class Name` field: </br>
-`com.prado.mediation.admob.adapters.PradoAdMobAdapter`
+`co.prado.mediation.admob.adapters.PradoAdMobAdapter`
 
 - Set the following json string in the `Parameter (optional)` field: </br>
 `{"AppID":"publisherId", "Token":"publisherToken"}`
