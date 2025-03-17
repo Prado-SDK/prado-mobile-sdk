@@ -144,7 +144,7 @@ PradoBannerView is a view that shows banner ads.
 
 * Create a PradoBannerView instance:
 ```java
-var pradoBannerView = new PradoBannerView(<Activity>); 
+var pradoBannerView = PradoBannerView(<Activity>); 
 ```
 
 * Set banner position:
