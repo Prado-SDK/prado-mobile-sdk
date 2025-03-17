@@ -210,7 +210,7 @@ pradoBannerView.close();
 
 * Find PradoBannerView instance in your layout by id:
 ```java
-final PradoBannerView pradoBannerView = (PradoBannerView) findViewById(<your banner id>); 
+val pradoBannerView = findViewById(<YOUR_ID_NAME>); 
 ```
 
 
