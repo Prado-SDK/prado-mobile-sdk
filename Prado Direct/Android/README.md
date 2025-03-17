@@ -154,7 +154,7 @@ pradoBannerView.setBannerPosition(PradoBannerView.Position.BOTTOM_CENTER);
 
 * Set banner listener:
 ```java 
-pradoBannerView!!.setBannerCallback(object : PradoBannerAdCallback {
+pradoBannerView.setBannerCallback(object : PradoBannerAdCallback {
     override fun onAdLoaded() {
        
     }
