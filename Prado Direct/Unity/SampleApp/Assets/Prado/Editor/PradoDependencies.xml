@@ -1,11 +1,6 @@
 <dependencies>
   <androidPackages>
-    <androidPackage spec="co.prado.sdk:prado-android-native:10.0.1">
-      <repositories>
-        <repository>https://repo.maven.apache.org/maven2/</repository>
-      </repositories>
-    </androidPackage>
-    <androidPackage spec="com.kpadplayer.sdk:kpadplayer-android-native:10.0.1">
+    <androidPackage spec="co.prado.sdk:prado-android-native:10.0.2">
       <repositories>
         <repository>https://repo.maven.apache.org/maven2/</repository>
       </repositories>
@@ -13,7 +8,7 @@
   </androidPackages>
 
   <iosPods>
-    <iosPod name="PradoSDK" version="10.0.1">
+    <iosPod name="PradoSDK" version="10.0.2">
       <sources>
         <source>https://github.com/CocoaPods/Specs</source>
       </sources>
