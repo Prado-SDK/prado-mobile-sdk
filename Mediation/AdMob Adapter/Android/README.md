@@ -9,9 +9,7 @@ Include the following inside your app build.gradle dependencies:
 
 ```java
 dependencies {
-    implementation("co.prado.sdk:prado-android-native:10.0.1")
-    implementation("com.kpadplayer.sdk:kpadplayer-android-native:10.0.1")
-    implementation("co.prado.sdk:prado-android-admob-adapter:2.0.1")
+    implementation("co.prado.sdk:prado-android-admob-adapter:2.0.2")
 }
 ```
 Follow instructions on how to [Set Up Custom Events](https://developers.google.com/admob/android/custom-events/setup#create) on the AdMob dashboard and set up Prado's adapter class:

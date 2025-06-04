@@ -144,7 +144,12 @@ PradoBannerView is a view that shows banner ads.
 
 * Create a PradoBannerView instance:
 ```java
-var pradoBannerView = new PradoBannerView(<Activity>); 
+var pradoBannerView = PradoBannerView(<Activity>); 
+```
+
+* Disable banner auto show on load:
+```java
+pradoBannerView.setAutoShow(false)
 ```
 
 * Set banner position:
@@ -154,7 +159,7 @@ pradoBannerView.setBannerPosition(PradoBannerView.Position.BOTTOM_CENTER);
 
 * Set banner listener:
 ```java 
-pradoBannerView!!.setBannerCallback(object : PradoBannerAdCallback {
+pradoBannerView.setBannerCallback(object : PradoBannerAdCallback {
     override fun onAdLoaded() {
        
     }
@@ -188,8 +193,7 @@ pradoBannerView!!.setBannerCallback(object : PradoBannerAdCallback {
 pradoBannerView.load(); 
 ```
 
-* Call banner show (banner needs to be ready before showing):
-
+* Call banner show if setAutoShow was set to false (banner needs to be loaded before showing):
 ```java
 pradoBannerView.show(); 
 ```
@@ -210,7 +214,7 @@ pradoBannerView.close();
 
 * Find PradoBannerView instance in your layout by id:
 ```java
-final PradoBannerView pradoBannerView = (PradoBannerView) findViewById(<your banner id>); 
+val pradoBannerView = findViewById(<YOUR_ID_NAME>); 
 ```
 
 
