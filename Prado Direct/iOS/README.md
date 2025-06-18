@@ -7,7 +7,7 @@ Minimum supported Xcode version is 14.1.
 
 Add the following line to your Podfile:
 ```
-pod 'PradoSDK', '10.0.1'
+pod 'PradoSDK', '10.0.3'
 ```
 
 ## API Usage and Sample App
