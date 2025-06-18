@@ -5,8 +5,7 @@
 #### Include the following inside your app build.gradle dependencies:
 ```groovy
 dependencies {
-    implementation("co.prado.sdk:prado-android-native:10.0.1")
-    implementation("com.kpadplayer.sdk:kpadplayer-android-native:10.0.1")
+    implementation("co.prado.sdk:prado-android-native:10.0.3")
 }
 ``` 
 
