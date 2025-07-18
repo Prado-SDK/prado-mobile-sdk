@@ -1,6 +1,5 @@
 # Prado ironSource iOS Adapter
 
-The Prado ironSource Adapter SDK was tested with ironSource mediation v8.1.0.0.<BR> 
 The minimum supported Xcode version is 14.3.1.<BR><BR>
 Check out the [ironSource Integration Documentation](https://developers.is.com/ironsource-mobile/ios/ios-sdk/) for app level integration.
 
@@ -8,7 +7,7 @@ Check out the [ironSource Integration Documentation](https://developers.is.com/i
 
 To add Prado ironSource Adapter to your project with CocoaPods:
 ```
-pod 'PradoIronSourceAdapter', '2.0.0'
+pod 'PradoIronSourceAdapter', '2.1.0'
 ```
 
 ## iOS SKAdNetwork Support
