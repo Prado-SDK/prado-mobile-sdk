@@ -3,7 +3,7 @@
 ## 10.0.5 - Aug 12, 2025
 
 * Stability improvement.
-* 
+ 
 ## 10.0.4 - Jun 22, 2025
 
 * Stability improvement.
