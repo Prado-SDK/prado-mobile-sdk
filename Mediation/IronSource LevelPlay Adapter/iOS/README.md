@@ -7,7 +7,7 @@ Check out the [ironSource Integration Documentation](https://developers.is.com/i
 
 To add Prado ironSource Adapter to your project with CocoaPods:
 ```
-pod 'PradoIronSourceAdapter', '2.1.0'
+pod 'PradoIronSourceAdapter', '2.2.0'
 ```
 
 ## iOS SKAdNetwork Support
