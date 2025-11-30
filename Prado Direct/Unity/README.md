@@ -4,16 +4,7 @@
 
 If you don't have the [External Dependency Manager](https://github.com/googlesamples/unity-jar-resolver) already integrated in your project, please download and import [external-dependency-manager-1.2.177.unitypackage](/Prado%20Direct/Unity/external-dependency-manager-1.2.177.unitypackage) into your project. 
 
-1. Download and import [PradoUnityPlugin.unitypackage](/Prado%20Direct/Unity/PradoUnityPlugin.unitypackage) into your project's Asset Folder.
-2. In the import window select all components. A new Prefabs object named `PradoObject` will appear in the Assets folder. 
-3. Open your requested Scene. 
-4. Drag the `PradoObject` into the selected scene.
-5. Select the `PradoObject` and enter your `Publisher ID` and `Security Token`. To receive these credentials please complete the process for [Prado's Publisher onboarding](http://accounts.prado.co/publishers/register?utm_source=prado_github) if you haven't done so already.
-
-6. If you're having issues with the 'PradoObject' you can open the SampleScene by double clicking it instead.
-
-<a href="url"><img src="http://d28lrrc51wcjkk.cloudfront.co/sdk/Unity_SDK_Publisher_Security_Token.png" align="center" height="250" width="400" ></a>
-
+Download and import [PradoUnityPlugin.unitypackage](/Prado%20Direct/Unity/PradoUnityPlugin.unitypackage) into your project's Asset Folder.
 
 ## Using the SDK
 
