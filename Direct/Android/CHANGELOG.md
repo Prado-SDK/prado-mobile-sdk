@@ -1,3 +1,11 @@
+## 10.1.5 - Dec 04, 2025
+- externalised the sdk version
+
+* externalised the sdk version
+
+
+Approved-by: yarden
+
 # Changelog
 
 ## 10.1.2 - Sep 29, 2025
