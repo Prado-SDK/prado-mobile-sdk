@@ -10,7 +10,7 @@ Boost your revenue with technology designed to amplify earnings.
 To get started, please select the option below that best suits your application:
 
 Integrate Prado SDK library directly into your iOS, Android or Unity game:
-- [Prado Direct](/Prado%20Direct)
+- [Direct](/Direct)
   
 Integrate Prado SDK via mediation:
 - [AdMob](/Mediation/AdMob%20Adapter)
