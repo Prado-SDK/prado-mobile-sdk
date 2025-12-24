@@ -1,5 +1,10 @@
 # Changelog
 
+
+## 10.1.6 - Dec 24, 2025
+- Fix banner might overlap virtual navigation bar on edge to edge devices.
+
+
 ## 10.1.2 - Sep 29, 2025
 
 * Stability Fix
