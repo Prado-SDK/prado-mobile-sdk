@@ -12,7 +12,7 @@ android {
         minSdk = 21
         targetSdk = 35
         versionCode = 1
-        versionName = "10.1.0"
+        versionName = "10.1.6"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -36,7 +36,7 @@ android {
 }
 
 dependencies {
-    implementation("co.prado.sdk:prado-android-native:10.0.2")
+    implementation("co.prado.sdk:prado-android-native:10.1.6")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
