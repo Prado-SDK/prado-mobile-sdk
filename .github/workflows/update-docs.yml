@@ -136,11 +136,12 @@ jobs:
                         echo "File $DEPENDENCY_FILE not found!"
                         exit 1
                       fi
-                      # Replace the Prado SDK version dynamically
-                      sed -i "s/\(co.prado.sdk:prado-android-native:\)[^']*/\1$VERSION/" "$DEPENDENCY_FILE"
+                      # Update Prado SDK dependency (Kotlin DSL syntax)
+                      sed -i "s/\(co.prado.sdk:prado-android-native:\)[^\")]*/\1$VERSION/" "$DEPENDENCY_FILE"
 
-                      sed -i "s/\(versionName[[:space:]]*\)\"[^\"]*\"/\1\"$VERSION\"/" "$DEPENDENCY_FILE"
-                      
+                      # Update versionName (Kotlin DSL syntax)
+                      sed -i "s/\(versionName\s*=\s*\"\)[^\"]*\"/\1$VERSION\"/" "$DEPENDENCY_FILE"
+
                       echo "Updated Prado SDK version to $VERSION in $DEPENDENCY_FILE"
 
                     elif [ "$OS_KEY" = "ios" ]; then
