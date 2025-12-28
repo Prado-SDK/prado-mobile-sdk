@@ -124,6 +124,41 @@ jobs:
                       echo "No changelog entry provided; skipping."
                   fi
 
+            - name: Update sample app dependency
+              if: ${{ github.event.inputs.mediation == '' }}
+              run: |
+                  VERSION="${{ github.event.inputs.version }}"
+                  OS_KEY="$(echo "${{ github.event.inputs.os }}" | tr -d '[:space:]' | tr -d '\r')"
+                  if [ -z "$MEDIATION_KEY" ]; then
+                    if [ "$OS_KEY" = "android" ]; then
+                      DEPENDENCY_FILE="$TARGET_PATH/sample-app/app/build.gradle"
+                      if [ ! -f "$DEPENDENCY_FILE" ]; then
+                        echo "File $DEPENDENCY_FILE not found!"
+                        exit 1
+                      fi
+                      # Replace the Prado SDK version dynamically
+                      sed -i "s/\(co.prado.sdk:prado-android-native:\)[^']*/\1$VERSION/" "$DEPENDENCY_FILE"
+
+                      sed -i "s/\(versionName[[:space:]]*\)\"[^\"]*\"/\1\"$VERSION\"/" "$DEPENDENCY_FILE"
+                      
+                      echo "Updated Prado SDK version to $VERSION in $DEPENDENCY_FILE"
+
+                    elif [ "$OS_KEY" = "ios" ]; then
+                      PODFILE="$TARGET_PATH/SampleApp/Podfile"
+                      if [ ! -f "$PODFILE" ]; then
+                        echo "Podfile $PODFILE not found!"
+                        exit 1
+                      fi
+                      # Replace the Prado SDK version dynamically in the pod definition
+                      sed -i "s/\(pod 'PradoSDK',\s*'\).*\('\)/\1$VERSION\2/" "$PODFILE"
+                      echo "Updated Prado SDK version to $VERSION in $PODFILE"
+
+                    else
+                      echo "Unknown OS: $OS_KEY"
+                      exit 1
+                    fi
+                  fi
+
             - name: Create branch
               run: |
                   VERSION="${{ github.event.inputs.version }}"
