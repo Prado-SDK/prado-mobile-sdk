@@ -36,7 +36,7 @@ android {
 }
 
 dependencies {
-    implementation("co.prado.sdk:prado-android-native:10.0.2")
+    implementation("co.prado.sdk:prado-android-native:10.1.6
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
