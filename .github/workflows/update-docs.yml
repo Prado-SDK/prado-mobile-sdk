@@ -131,7 +131,7 @@ jobs:
                   OS_KEY="$(echo "${{ github.event.inputs.os }}" | tr -d '[:space:]' | tr -d '\r')"
                   if [ -z "$MEDIATION_KEY" ]; then
                     if [ "$OS_KEY" = "android" ]; then
-                      DEPENDENCY_FILE="$TARGET_PATH/sample-app/app/build.gradle"
+                      DEPENDENCY_FILE="$TARGET_PATH/sample-app/app/build.gradle.kts"
                       if [ ! -f "$DEPENDENCY_FILE" ]; then
                         echo "File $DEPENDENCY_FILE not found!"
                         exit 1
