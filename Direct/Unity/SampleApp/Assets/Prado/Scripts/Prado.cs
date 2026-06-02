@@ -155,6 +155,7 @@ namespace PradoSDK
 			print ( "Prado | init:" + developerID + "," + securityToken /*+ "," + "-->" + instance.PublisherID + "," + instance.SecurityToken*/ );
 			GameObject gameObject = new GameObject("PradoObject");
 			instance = gameObject.AddComponent<Prado>();
+			DontDestroyOnLoad(gameObject); // Keep across scenes
 			pradoin.init ( developerID, securityToken, PLUGIN_VERSION );
 		}
 		
