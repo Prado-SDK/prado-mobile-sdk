@@ -1,19 +1,16 @@
 # Changelog
 
-
 ## 10.1.9 - Jul 14, 2026
 - Stability fixes
 
-
+## 10.1.8 - Jun 29, 2026
+- Fixed ad caching reset issue
 
 ## 10.1.7 - Apr 28, 2026
 - Stability fixes
 
-
-
 ## 10.1.6 - Dec 24, 2025
 - Fix banner might overlap virtual navigation bar on edge to edge devices.
-
 
 ## 10.1.2 - Sep 29, 2025
 
