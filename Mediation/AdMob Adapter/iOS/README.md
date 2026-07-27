@@ -6,7 +6,7 @@ Check out the [Admob Mediation Documentation](https://developers.google.com/admo
 ## Integration Steps:
 To add Prado Admob Adapter to your project with CocoaPods:
 ```
-pod 'PradoAdmobAdapter', '2.0.0'
+pod 'PradoAdmobAdapter', '2.0.1'
 ```
 
 Follow instructions on how to [Set Up Custom Events](https://developers.google.com/admob/ios/custom-events/setup#create) on the AdMob dashboard and set up Prado's adapter class:
