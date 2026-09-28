@@ -42,6 +42,13 @@ protected void onCreate(Bundle savedInstanceState)
 }
 ```
 
+## Verbose Logging
+Verbose logging is off by default. Turn it on while integrating to see detailed SDK logs in Logcat, and turn it off before publishing your app.
+
+```kotlin
+Prado.setVerboseLogging(true)
+```
+
 ## Prado Interstitial
 The PradoInterstitialAd is a full screen single ad unit.
 
