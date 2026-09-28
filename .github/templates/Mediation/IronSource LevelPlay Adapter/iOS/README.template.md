@@ -1,6 +1,11 @@
 # Prado ironSource iOS Adapter
 
-The minimum supported Xcode version is 14.3.1.<BR><BR>
+## Requirements
+- iOS 14.0 or higher
+- Xcode 26.2 or higher
+- Prado iOS SDK 11.x
+- ironSource LevelPlay SDK 9.4.1 or higher
+
 Check out the [ironSource Integration Documentation](https://developers.is.com/ironsource-mobile/ios/ios-sdk/) for app level integration.
 
 ## Integration Steps:

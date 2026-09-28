@@ -1,7 +1,10 @@
 # Prado iOS Mobile SDK
 
-Prado SDK is compatible with iOS 12.0 and above and is written in Objective-C and Swift.<BR>
-Minimum supported Xcode version is 16.
+## Requirements
+- iOS 14.0 or higher
+- Xcode 26.2 or higher
+
+Prado SDK is written in Objective-C and Swift.
 
 ## Getting Started
 

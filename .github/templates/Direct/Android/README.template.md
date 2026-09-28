@@ -1,5 +1,8 @@
 # Prado Android Mobile SDK
 
+## Requirements
+- Android API level 21 or higher
+
 ## Getting Started:
 
 #### Include the following inside your app build.gradle dependencies:
