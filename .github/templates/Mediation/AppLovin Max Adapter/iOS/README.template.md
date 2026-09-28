@@ -14,6 +14,11 @@ To add the adapter to your project with CocoaPods:
 ```
 pod 'PradoApplovinAdapter', '{{VERSION}}'
 ```
+
+To add it with Swift Package Manager, open **File > Add Package Dependencies…** in Xcode, enter the package URL below, set the dependency rule to **Exact Version** `{{VERSION}}`, and add the `PradoApplovinAdapter` product to your app target:
+```
+https://github.com/Prado-SDK/prado-applovin-adapter-swift-package
+```
 ## iOS SKAdNetwork Support
 
 Please make sure to include the Prado ad network ID in your app property list file (Info.plist):

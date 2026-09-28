@@ -15,6 +15,11 @@ To add Prado ironSource Adapter to your project with CocoaPods:
 pod 'PradoIronSourceAdapter', '{{VERSION}}'
 ```
 
+To add it with Swift Package Manager, open **File > Add Package Dependencies…** in Xcode, enter the package URL below, set the dependency rule to **Exact Version** `{{VERSION}}`, and add the `PradoIronSourceAdapter` product to your app target:
+```
+https://github.com/Prado-SDK/prado-levelplay-adapter-swift-package
+```
+
 ## iOS SKAdNetwork Support
 
 Please make sure to include the Prado ad network ID in your app property list file (Info.plist):
