@@ -57,7 +57,7 @@ The PradoInterstitialAd is a full screen single ad unit.
 To use the Interstitial Ad you first need to load an Ad instance with an PradoInterstitialAdCallback listener :
 
 ```java
-val mInterstitialAd : PradoInterstitialAd? = null
+var pradoInterstitialAd: PradoInterstitialAd? = null
 
 PradoInterstitialAd.load(object : PradoInterstitialAdCallback {
     override fun onAdLoaded(ad: PradoInterstitialAd) {
@@ -91,7 +91,7 @@ PradoInterstitialAd.load(object : PradoInterstitialAdCallback {
 In order to show the ad once it is loaded call:
 
 ```java
-mInterstitialAd.show()
+pradoInterstitialAd?.show()
 ```
 
 ## Prado Rewarded
@@ -142,7 +142,7 @@ PradoRewardedAd.load(object : PradoRewardedAdCallback {
 In order to show the ad once it is loaded call:
 
 ```java
-mRewardedAd.show()
+pradoRewardedAd?.show()
 ```
 
 ## Prado Banner

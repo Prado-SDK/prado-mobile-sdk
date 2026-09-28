@@ -32,10 +32,10 @@ For more information, see [Configuring a Source App for SKAdNetwork](https://dev
 #### Setting up custom events
 Follow instructions on how to [Set Up Custom Events](https://developers.google.com/admob/android/custom-events/setup#create) on the AdMob dashboard and set up Prado's adapter class:
 - Set the following full path in the `Class Name` field: </br>
-`com.prado.mediation.admob.adapters.PradoAdMobAdapter`
+`co.prado.mediation.admob.adapters.PradoAdMobAdapter`
 
 - Set the following json string in the `Parameter (optional)` field: </br>
 `{"AppID":"publisherId", "Token":"publisherToken"}`
 
-- Replace `publisherId` and `publisherToken` with the credentials received during [Prado's Publisher onboarding](http://accounts.kidoz.net/publishers/register?utm_source=prado_github) process.
+- Replace `publisherId` and `publisherToken` with the credentials received during [Prado's Publisher onboarding](http://accounts.prado.co/publishers/register?utm_source=prado_github) process.
 
