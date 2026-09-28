@@ -1,5 +1,8 @@
 # Prado Android Mobile SDK
 
+## Requirements
+- Android API level 21 or higher
+
 ## Getting Started:
 
 #### Include the following inside your app build.gradle dependencies:
@@ -39,6 +42,13 @@ protected void onCreate(Bundle savedInstanceState)
 }
 ```
 
+## Verbose Logging
+Verbose logging is off by default. Turn it on while integrating to see detailed SDK logs in Logcat, and turn it off before publishing your app.
+
+```kotlin
+Prado.setVerboseLogging(true)
+```
+
 ## Prado Interstitial
 The PradoInterstitialAd is a full screen single ad unit.
 
@@ -47,9 +57,9 @@ The PradoInterstitialAd is a full screen single ad unit.
 To use the Interstitial Ad you first need to load an Ad instance with an PradoInterstitialAdCallback listener :
 
 ```java
-val mInterstitialAd : PradoInterstitialAd? = null
+var pradoInterstitialAd: PradoInterstitialAd? = null
 
-PradoInterstitialAd.load(this, object : PradoInterstitialAdCallback {
+PradoInterstitialAd.load(object : PradoInterstitialAdCallback {
     override fun onAdLoaded(ad: PradoInterstitialAd) {
         pradoInterstitialAd = ad
     }
@@ -81,7 +91,7 @@ PradoInterstitialAd.load(this, object : PradoInterstitialAdCallback {
 In order to show the ad once it is loaded call:
 
 ```java
-mInterstitialAd.show()
+pradoInterstitialAd?.show()
 ```
 
 ## Prado Rewarded
@@ -94,7 +104,7 @@ To use the Rewarded Ad you first need to load an Ad instance with a PradoRewarde
 ```java
 var pradoRewardedAd: PradoRewardedAd? = null
 
-PradoRewardedAd.load(this, object : PradoRewardedAdCallback {
+PradoRewardedAd.load(object : PradoRewardedAdCallback {
     override fun onAdLoaded(ad: PradoRewardedAd) {
         pradoRewardedAd = ad
     }
@@ -132,7 +142,7 @@ PradoRewardedAd.load(this, object : PradoRewardedAdCallback {
 In order to show the ad once it is loaded call:
 
 ```java
-mRewardedAd.show()
+pradoRewardedAd?.show()
 ```
 
 ## Prado Banner

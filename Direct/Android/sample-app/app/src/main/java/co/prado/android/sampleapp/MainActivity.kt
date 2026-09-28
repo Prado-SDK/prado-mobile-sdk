@@ -242,7 +242,7 @@ class MainActivity : Activity() {
     }
 
     private fun loadInterstitial(){
-        PradoInterstitialAd.load(this, object : PradoInterstitialAdCallback {
+        PradoInterstitialAd.load(object : PradoInterstitialAdCallback {
             override fun onAdLoaded(ad: PradoInterstitialAd) {
                 pradoInterstitialAd = ad
                 onInterstitialLoaded()
@@ -317,7 +317,7 @@ class MainActivity : Activity() {
     }
 
     private fun loadRewarded(){
-        PradoRewardedAd.load(this, object : PradoRewardedAdCallback {
+        PradoRewardedAd.load(object : PradoRewardedAdCallback {
             override fun onAdLoaded(ad: PradoRewardedAd) {
                 pradoRewardedAd = ad
                 onRewardedLoaded()

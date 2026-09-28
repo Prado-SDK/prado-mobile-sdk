@@ -1,5 +1,9 @@
 # Prado Admob Android Adapter
-The Prado Admob adapter was built and tested with google play-services-ad v22.1.0<BR>
+
+## Requirements
+- Android API level 21 or higher
+- Prado Android SDK 11.x
+- Google Mobile Ads SDK (`com.google.android.gms:play-services-ads`) 23.2.0 or higher
 
 Check out the [Admob Mediation Documentation](https://developers.google.com/admob/android/quick-start) for app level integration.
 

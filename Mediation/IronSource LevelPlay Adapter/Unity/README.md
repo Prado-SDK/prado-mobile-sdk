@@ -6,7 +6,7 @@ Check out the [ironSource Integration Documentation](https://developers.is.com/i
 
 ## Integration Steps:
 
-Download and import [PradoIronsourceAdapter.unitypackage](Mediation/IronSource%20LevelPlay%20Adapter/Unity/PradoIronsourceAdapter.unitypackage) into your Project's Asset Folder.
+Download and import [PradoIronSourceAdapter.unitypackage](/Mediation/IronSource%20LevelPlay%20Adapter/Unity/PradoIronSourceAdapter.unitypackage) into your Project's Asset Folder.
 	
 ## iOS integration
 
