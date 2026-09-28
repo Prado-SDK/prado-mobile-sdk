@@ -52,7 +52,7 @@ To use the Interstitial Ad you first need to load an Ad instance with an PradoIn
 ```java
 val mInterstitialAd : PradoInterstitialAd? = null
 
-PradoInterstitialAd.load(this, object : PradoInterstitialAdCallback {
+PradoInterstitialAd.load(object : PradoInterstitialAdCallback {
     override fun onAdLoaded(ad: PradoInterstitialAd) {
         pradoInterstitialAd = ad
     }
@@ -97,7 +97,7 @@ To use the Rewarded Ad you first need to load an Ad instance with a PradoRewarde
 ```java
 var pradoRewardedAd: PradoRewardedAd? = null
 
-PradoRewardedAd.load(this, object : PradoRewardedAdCallback {
+PradoRewardedAd.load(object : PradoRewardedAdCallback {
     override fun onAdLoaded(ad: PradoRewardedAd) {
         pradoRewardedAd = ad
     }
