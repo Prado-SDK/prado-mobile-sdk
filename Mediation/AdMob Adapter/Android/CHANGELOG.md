@@ -2,7 +2,7 @@
 
 
 ## 3.0.0 - Nov 26, 2026
-- Release 3.0.0
+- Requires Prado Android SDK 11.x and Google Mobile Ads SDK 23.2.0 or higher
 
 
 

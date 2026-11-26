@@ -2,7 +2,8 @@
 
 
 ## 11.0.0 - Nov 26, 2026
-- Release 11.0.0
+- `PradoInterstitialAd.load` and `PradoRewardedAd.load` no longer need an Activity: call `load(callback)`. The Activity overloads are deprecated
+- Add `Prado.setVerboseLogging(Boolean)` to turn detailed SDK logs on while integrating
 
 
 ## 10.1.9 - Jul 14, 2026
