@@ -1,5 +1,14 @@
 # Changelog
 
+
+## 3.0.0 - Nov 26, 2026
+- Merged in release/3.0.0 (pull request #13)
+
+Release 3.0.0
+
+Approved-by: yarden
+
+
 ## 2.1.0 - Jun 18, 2025
 
 * Fix lifecycle issues on full screen ads

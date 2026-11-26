@@ -7,6 +7,6 @@ Include the following inside your app build.gradle dependencies:
 
 ```java
 dependencies {
-    implementation("co.prado.sdk:prado-android-ironsource-adapter:2.1.0")
+    implementation("co.prado.sdk:prado-android-ironsource-adapter:3.0.0")
 }
 ``` 
