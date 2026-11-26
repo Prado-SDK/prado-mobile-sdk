@@ -5,7 +5,7 @@
 #### Include the following inside your app build.gradle dependencies:
 ```groovy
 dependencies {
-    implementation("co.prado.sdk:prado-android-native:10.1.9")
+    implementation("co.prado.sdk:prado-android-native:11.0.0")
 }
 ``` 
 
