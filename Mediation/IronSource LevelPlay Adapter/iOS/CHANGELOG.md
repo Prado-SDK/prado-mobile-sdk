@@ -13,4 +13,4 @@
 
 ## 2.0.0 - Jan 6, 2025
 
-* Update  Kidox SDK to v10.0.0
+* Update Prado SDK to v10.0.0
