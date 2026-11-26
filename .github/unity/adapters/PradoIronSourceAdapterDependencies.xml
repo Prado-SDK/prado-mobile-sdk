@@ -7,7 +7,7 @@
     </androidPackage>
   </androidPackages>
   <iosPods>
-    <iosPod name="PradoIronSourceAdapter" version="2.2.0">
+    <iosPod name="PradoIronSourceAdapter" version="3.0.0">
       <sources>
         <source>https://github.com/CocoaPods/Specs</source>
       </sources>
