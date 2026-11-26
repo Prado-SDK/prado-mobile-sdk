@@ -178,7 +178,7 @@ The flow inside your app is:
    Your server communicates with Prado or other exchanges to obtain bids.
 
 3. **Load a Winning Bid Into the SDK**
-   Once you have a winning bid response string, create a `KidozBid` instance and call the relevant `load(bid:delegate:)` method to load the ad.
+   Once you have a winning bid response string, create a `PradoBid` instance and call the relevant `load(bid:delegate:)` method to load the ad.
    
 ### 1. Initialize the SDK
 
@@ -201,23 +201,24 @@ let rewardedSignal = PradoRewardedAd.getSignal()
 let bannerSignal = PradoBannerView.getSignal()
 ```
 
-### 3. Create a `KidozBid` From the Winning Bid Response
+### 3. Create a `PradoBid` From the Winning Bid Response
 
 ```Swift
-let kidozBid = KidozBid(bidResponse: String)
+let pradoBid = PradoBid(bidResponse: String)
 ```
 
 ### 4. Load the Ad With the Bid
 
 ```Swift
 // Interstitial
-PradoInterstitialAd.load(bid: kidozBid, delegate: self)
+PradoInterstitialAd.load(bid: pradoBid, delegate: self)
 
 // Rewarded
-PradoRewardedAd.load(bid: kidozBid, delegate: self)
+PradoRewardedAd.load(bid: pradoBid, delegate: self)
 
 // Banner
-bannerView.load(bid: kidozBid, delegate: self)
+bannerView.delegate = self
+bannerView.load(pradoBid)
 ```
 
 You continue to implement the same delegate callbacks (`PradoInterstitialDelegate`, `PradoRewardedDelegate`, `PradoBannerDelegate`) to receive load/show/close events as with the standard loading methods.
