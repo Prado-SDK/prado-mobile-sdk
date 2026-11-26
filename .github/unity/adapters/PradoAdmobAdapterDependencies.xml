@@ -1,6 +1,6 @@
 <dependencies>
   <androidPackages>
-    <androidPackage spec="co.prado.sdk:prado-android-admob-adapter:2.0.4">
+    <androidPackage spec="co.prado.sdk:prado-android-admob-adapter:3.0.0">
       <repositories>
         <repository>https://repo.maven.apache.org/maven2/</repository>
       </repositories>
