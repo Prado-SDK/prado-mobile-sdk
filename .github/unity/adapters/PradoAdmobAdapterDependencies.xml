@@ -1,13 +1,13 @@
 <dependencies>
   <androidPackages>
-    <androidPackage spec="co.prado.sdk:prado-android-admob-adapter:2.0.4">
+    <androidPackage spec="co.prado.sdk:prado-android-admob-adapter:3.0.0">
       <repositories>
         <repository>https://repo.maven.apache.org/maven2/</repository>
       </repositories>
     </androidPackage>
   </androidPackages>
   <iosPods>
-    <iosPod name="PradoAdmobAdapter" version="2.0.1">
+    <iosPod name="PradoAdmobAdapter" version="3.0.0">
       <sources>
         <source>https://github.com/CocoaPods/Specs</source>
       </sources>
